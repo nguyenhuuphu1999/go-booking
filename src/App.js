@@ -2,7 +2,7 @@
 import './App.css';
 import RoomListItem from './components/RoomListItem';
 import NearbyLocationListItem from './components/NearbyLocationListItem';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
 import HomeSearch from './components/HomeSearch';
 import Slogan from './components/Slogan';
 import SearchIcon from './components/SearchIcon';
@@ -14,12 +14,13 @@ import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
-      <div className="top-menu">
-        <Header/>
+      
+      <header>
+        <Navbar/>
         <HomeSearch/>
         <Slogan/>
         <SearchIcon/>
-      </div>
+      </header>   
         
       <div className="near-by-locations">
         {

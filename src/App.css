@@ -295,6 +295,17 @@ nav {
 }
 
 
+/* Feedbacks */
+.feedbacks {
+    display: flex;
+    margin-top: 50px;
+}
+
+.feedbacks .feedback{
+    margin-top: 50px;
+}
+
+
 
 
 
