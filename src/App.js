@@ -8,6 +8,8 @@ import Slogan from './components/Slogan';
 import SearchIcon from './components/SearchIcon';
 import FamousPlace from './components/FamousPlace';
 import Feedback from './components/Feedback';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
@@ -31,7 +33,7 @@ function App() {
         }
       </div>
 
-      <div className="famous-place">
+      <div className="famous-places">
         {
           famousPlaces.map(famousPlace => <FamousPlace famousPlace = {famousPlace}/>)
         }
@@ -42,6 +44,8 @@ function App() {
              feedbacks.map(feedback => <Feedback feedback = {feedback}/>)
           }
        </div>
+
+       <Footer/>
     </div>
   );
 }
@@ -140,14 +144,7 @@ let famousPlaces = [
     name: 'Ha Noi',
   photos: 'https://s3-alpha-sig.figma.com/img/7680/0c47/3d054b907951e5b2a564e2428f81003d?Expires=1609718400&Signature=D1Em0DrOqtYakPSeWIj7mvoYvMnNA5HOfAp3XGBDgjHPncPTgqkDdr84qTsVZvlIyCLLPWQ5JjKUd0kaQnKqWN6mRuVD71oXX5FrBluVmLqvROwlbAjrIlI-wYICva3bvqxpC04EAAfMU4JM7-kzTWszT5D7rGiNAhYeDcoT9~ubMVO5ZZbabV7p0AqzwBsXIklPwU~KDR~WVpSqbDOqUgujt~vcwWcY~fad4S46lDtHjemrkO39Z3Lrl96v5K~ytuugV1KSBXd12oTFK9PNGtuB3m~fM6OSp-yjvOHCQetUfSoD4etghkaZ3OdEhPIHhobum5wgG0YgPEUkleP4Mg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
   },
-  {
-    name: 'Ha Long',
-  photos: 'https://s3-alpha-sig.figma.com/img/92c7/1914/b75209b31e3555d9baa2bb362c785ca4?Expires=1609718400&Signature=diTg7dEkAuD~TY5rAslt2FqPdC5zQGjreLetaBqtYsQft63JNuZQjoIouphlcUc~aQCKsKkSnNHZPH46Bdgp1dBPCEJK697Ds3t5KPJ4u8XC1aqZClWP9nfl~k8qW1UQtcnHDUhkPNolkrnefUMtypNLH~5rTttqb~f7g-bMWn4cRbrHuAP~zEzDBon7KjkkMHdDMOCKTyV7ZCJ~yOkLW51Ig2rhLNODN1dVkaCWOD-ryZdU9lWtbrRxl4KnD1ycg8BsbnLzrEILALjTqG7jHN~ed-iU-jelyZWytvHz-6JNYxhMzrd7jjpU1rN-klqH3JAaHcj~oUc3XzGIcjlTrA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
-  },
-  {
-    name: 'Ha Noi',
-  photos: 'https://s3-alpha-sig.figma.com/img/7680/0c47/3d054b907951e5b2a564e2428f81003d?Expires=1609718400&Signature=D1Em0DrOqtYakPSeWIj7mvoYvMnNA5HOfAp3XGBDgjHPncPTgqkDdr84qTsVZvlIyCLLPWQ5JjKUd0kaQnKqWN6mRuVD71oXX5FrBluVmLqvROwlbAjrIlI-wYICva3bvqxpC04EAAfMU4JM7-kzTWszT5D7rGiNAhYeDcoT9~ubMVO5ZZbabV7p0AqzwBsXIklPwU~KDR~WVpSqbDOqUgujt~vcwWcY~fad4S46lDtHjemrkO39Z3Lrl96v5K~ytuugV1KSBXd12oTFK9PNGtuB3m~fM6OSp-yjvOHCQetUfSoD4etghkaZ3OdEhPIHhobum5wgG0YgPEUkleP4Mg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
-  },
+  
   {
     name: 'Ha Long',
   photos: 'https://s3-alpha-sig.figma.com/img/92c7/1914/b75209b31e3555d9baa2bb362c785ca4?Expires=1609718400&Signature=diTg7dEkAuD~TY5rAslt2FqPdC5zQGjreLetaBqtYsQft63JNuZQjoIouphlcUc~aQCKsKkSnNHZPH46Bdgp1dBPCEJK697Ds3t5KPJ4u8XC1aqZClWP9nfl~k8qW1UQtcnHDUhkPNolkrnefUMtypNLH~5rTttqb~f7g-bMWn4cRbrHuAP~zEzDBon7KjkkMHdDMOCKTyV7ZCJ~yOkLW51Ig2rhLNODN1dVkaCWOD-ryZdU9lWtbrRxl4KnD1ycg8BsbnLzrEILALjTqG7jHN~ed-iU-jelyZWytvHz-6JNYxhMzrd7jjpU1rN-klqH3JAaHcj~oUc3XzGIcjlTrA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'

@@ -276,5 +276,27 @@ nav {
     padding-top: 3px;
 }
 
+/* FamousPlace */
+.famous-places {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.famous-places .famous-place{
+    display: flex;
+    width: 240px;
+    height: 217px;
+    border: none;
+}
+
+.card {
+    border: none;
+}
+
+
+
+
+
 
 
