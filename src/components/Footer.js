@@ -7,7 +7,7 @@ import Saigontourist from '../img/saigon-tourist-logo.png';
 
 const Footer = () => {
     return (
-        <div>
+        <div className="footer">
             <div className="top-footer">
                 <div className="helps">
                     <p>Trợ giúp</p>
