@@ -1,19 +1,38 @@
+import React from "react";
 
+import { nearbyLocationItemList } from "../FakeData/data";
+import Grid from "@material-ui/core/Grid";
+import { makeStyles } from "@material-ui/core/styles";
+import NearbyLocationItem from './NearbyLocationItem';
 
-function NearbyLocationListItem ({ location: { thumbnailUrl, detail, address } }) {
-    return (
-        <div className="near-by-location">
-            <div className="near-by-img">
-                <img src={thumbnailUrl} alt={detail}/>
-            </div>
-            <div>{detail}</div>
-            <div>
-                <span className=""></span>
-                <span className="">{address}</span>
-            </div>
-            <div></div>
-        </div>
-    )
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+    width: 1350,
+    margin: 'auto',
+    marginTop: 83
+  },
+  h3Style: {
+      marginLeft: 30,
+      fontSize: 27,
+      marginBottom: 63
+  }
+}));
+
+export default function NearbyLocationItemList() {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+    <h3 className={classes.h3Style}>Gần bạn</h3>
+      <Grid container spacing={3} align="center">
+        {nearbyLocationItemList.map((nearbyLocationItem) => (
+          <Grid item xs={12} md={3}>
+            <NearbyLocationItem nearbyLocationItem={nearbyLocationItem} />
+          </Grid>
+        ))}
+      </Grid>
+    </div>
+  );
+
 }
-
-export default NearbyLocationListItem;

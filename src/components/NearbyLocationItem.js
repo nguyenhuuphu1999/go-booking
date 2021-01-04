@@ -7,16 +7,16 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 240,
+    maxWidth: 288,
     maxHeight: 345,
   },
   media: {
-    height: 160,
-    width: 240,
+    height: 220,
+    width: 288,
     borderRadius: 41,
   },
 });
-function Apartment({ apartment: { title, image_url, access_times } }) {
+function NearbyLocationItem({ nearbyLocationItem: { description, image_url, address, price } }) {
   const classes = useStyles();
 
   return (
@@ -26,8 +26,8 @@ function Apartment({ apartment: { title, image_url, access_times } }) {
         image={image_url}
         title="Contemplative Reptile"
       />
-      <Typography gutterBottom align="center" variant="h6" component="h2">
-        {title}
+      <Typography gutterBottom align="center" component="h2">
+        {description}
       </Typography>
       <Typography
         align="center"
@@ -35,10 +35,10 @@ function Apartment({ apartment: { title, image_url, access_times } }) {
         color="textSecondary"
         component="p"
       >
-        {access_times}
+        {address}
       </Typography>
     </CardActionArea>
   );
 }
 
-export default Apartment;
+export default NearbyLocationItem;

@@ -1,9 +1,9 @@
-import FaceBook from '../img/facebook-logo.png';
-import Twitter from '../img/twitter-logo.png';
-import Instagram from '../img/instagram-logo.png';
-import Momo from '../img/momo-logo.png';
-import AirPay from '../img/AirPay-logo.png';
-import Saigontourist from '../img/saigon-tourist-logo.png';
+import FaceBook from '../../img/facebook-logo.png';
+import Twitter from '../../img/twitter-logo.png';
+import Instagram from '../../img/instagram-logo.png';
+import Momo from '../../img/momo-logo.png';
+import AirPay from '../../img/AirPay-logo.png';
+import Saigontourist from '../../img/saigon-tourist-logo.png';
 
 const Footer = () => {
     return (
@@ -37,6 +37,11 @@ const Footer = () => {
                     <span>Giải pháp đối tác</span>
                     <span>Đối tác liên kết</span>
                     <span>Đối tác kết nối</span>
+                </div>
+                <div className="download">
+                    <p>Tải ứng dụng</p>
+                    <span>Ứng dụng iOS</span>
+                    <span>Ứng dụng Android</span>
                 </div>
             </div>
             <div className="below-footer">

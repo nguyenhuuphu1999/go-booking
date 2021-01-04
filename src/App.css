@@ -48,13 +48,7 @@ section {
 /* HEADER */
 /* ------------------------------------------------------------- */
 
-header {
-  background-image: url('https://s3-alpha-sig.figma.com/img/c407/ae06/f2f4040e8d90866a181cd98f1f0bb70a?Expires=1609718400&Signature=eOthGY10ZXQm2AzCIe7Em7RYQSMeABz3zEWLPA-s-vnBQKjyyZ2tKjQAA5oe4zHlqnnxiPC61SGeA4yxvXoTNy2njR67FA~Wb7dyavEtNQx92jvI2YQOIXXC3-6G5NQT7A9AOLaGFDBRFOaZFmn5y9sSE9hTdaiJuIy~E3Bgm4ELdG4yUfQxeaaQrWx4SKTJJEXYMCP8IFYVjuz4hq4ygY9mp3tQQml5kkL21IwzA6YAWM1ME7HxS3Fpo357eF2M9~a7WqxgbcpnQ5SPgb5QFMBLYgHNFTSP427eZimZCrwBGva2AtDtBeoJ8efqKgFtjaatKvLEXgJ0X9aIp29evw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  background-attachment: fixed;
-}
+
 
 /* ------------------ */
 
@@ -324,10 +318,12 @@ nav {
 
 .below-footer {
     background: #DCDCDC;
+    height: calc(90vh - 270px);
 }
 
 .top-footer {
     background: #F7F7F7;
     display: flex;
     justify-content: space-around;
+    height: 270px;
 }

@@ -7,38 +7,31 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 240,
+    maxWidth: 288,
     maxHeight: 345,
   },
   media: {
-    height: 160,
-    width: 240,
+    height: 125,
+    width: 184,
     borderRadius: 41,
   },
 });
-function Apartment({ apartment: { title, image_url, access_times } }) {
+function FamousPlace({ famousPlace: {image_url, address} }) {
   const classes = useStyles();
 
   return (
+    
     <CardActionArea className={classes.root}>
       <CardMedia
         className={classes.media}
         image={image_url}
         title="Contemplative Reptile"
       />
-      <Typography gutterBottom align="center" variant="h6" component="h2">
-        {title}
-      </Typography>
-      <Typography
-        align="center"
-        variant="body2"
-        color="textSecondary"
-        component="p"
-      >
-        {access_times}
+      <Typography gutterBottom align="center" component="h2">
+        {address}
       </Typography>
     </CardActionArea>
   );
 }
 
-export default Apartment;
+export default FamousPlace;

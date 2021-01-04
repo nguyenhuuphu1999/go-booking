@@ -1,71 +1,54 @@
 // import React from 'react';
 import './App.css'
-import RoomListItem from './components/RoomListItem'
+
+import Feedbacks from './components/Feedbacks'
+import Footer from './components/footer/Footer'
+import React from 'react'
+
+import Header from './components/header/Header'
+import Apartments from './components/Apartments'
 import NearbyLocationListItem from './components/NearbyLocationListItem'
-import Navbar from './components/Navbar'
-import HomeSearch from './components/HomeSearch'
-import Slogan from './components/Slogan'
-import SearchIcon from './components/SearchIcon'
-import Apartment from './components/Apartment'
-import Feedback from './components/Feedback'
-import Footer from './components/Footer'
-import React, { useEffect, useState } from 'react'
-import apartmentApi from './api/apartmentApi'
+import FamousPlaces from './components/FamousPlaces'
+
+// import React, { useEffect, useState } from 'react'
+// import apartmentApi from './api/apartmentApi'
 
 function App() {
-  const [apartments, setApartments] = useState([])
+  // const [apartments, setApartments] = useState([])
 
-  useEffect(() => {
-    const fetchApartments = async () => {
-      try {
-        // const params = { _page: 1, _limit: 10 };
-        const response = await apartmentApi.getAll()
-        console.log('Fetch products successfully: ', response)
-        setApartments(response.data)
-      } catch (error) {
-        console.log('Failed to fetch product list: ', error)
-      }
-    }
-    fetchApartments()
-  }, []);
+  // useEffect(() => {
+  //   const fetchApartments = async () => {
+  //     try {
+  //       // const params = { _page: 1, _limit: 10 };
+  //       const response = await apartmentApi.getAll()
+  //       console.log('Fetch products successfully: ', response)
+  //       setApartments(response.data)
+  //     } catch (error) {
+  //       console.log('Failed to fetch product list: ', error)
+  //     }
+  //   }
+  //   fetchApartments()
+  // }, []);
 
 
 
   return (
     <div className="App">
-      <header>
-        <Navbar />
-        <HomeSearch />
-        <Slogan />
-        <SearchIcon />
-      </header>
+      
 
-      <div className="apartments">
+      {/* <div className="apartments">
         {apartments.map(apartment => (
           <Apartment apartment={apartment} />
         ))}
-      </div>
+      </div> */}
 
-      <h3>Gần bạn</h3>
+      <Header/>
+      <Apartments/>
+      <NearbyLocationListItem/>
+      <FamousPlaces />
+      
 
-      <div className="near-by-locations">
-        {NearbyLocationListItems.map(location => (
-          <NearbyLocationListItem location={location} />
-        ))}
-      </div>
-
-      <div className="room-item-list">
-        {RoomListItems.map(room => (
-          <RoomListItem roomItem={room} />
-        ))}
-      </div>
-
-
-      <div className="feedbacks">
-        {feedbacks.map(feedback => (
-          <Feedback feedback={feedback} />
-        ))}
-      </div>
+      <Feedbacks/>
 
       <Footer />
     </div>

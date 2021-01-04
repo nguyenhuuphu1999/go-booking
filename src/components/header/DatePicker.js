@@ -10,9 +10,17 @@ const useStyles = makeStyles((theme) => ({
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
-    width: 100
+    width: 200,
+    size: '12'
   },
-}));
+  style:{
+    color: 'rgb(0, 0, 0, 0.54)',
+    width: '400px',
+    fontSize: '16px',
+    lineHeight: '24px',
+  }
+}
+));
 
 export default function DatePickers() {
   const classes = useStyles();
@@ -28,6 +36,7 @@ export default function DatePickers() {
         InputLabelProps={{
           shrink: true,
         }}
+        style={{fontSize: '5px'}}
       />
     </form>
   );
