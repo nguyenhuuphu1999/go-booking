@@ -4,6 +4,7 @@ import Instagram from '../../img/instagram-logo.png';
 import Momo from '../../img/momo-logo.png';
 import AirPay from '../../img/AirPay-logo.png';
 import Saigontourist from '../../img/saigon-tourist-logo.png';
+import './Footer.css'
 
 const Footer = () => {
     return (
