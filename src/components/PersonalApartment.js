@@ -1,9 +1,9 @@
 import React from "react";
 
-import { nearbyLocationItemList } from "../FakeData/data";
+import { personalApartmentList } from "../FakeData/data";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import NearbyLocationItem from './NearbyLocationItem';
+import  SpecificApartment from './NearbyLocationItem';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,16 +19,16 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function NearbyLocationItemList() {
+export default function PersonalApartment() {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-    <h3 className={classes.h3Style}>Gần bạn</h3>
+    <h3 className={classes.h3Style}>Chỗ ở gần bạn</h3>
       <Grid container spacing={3} align="center">
-        {nearbyLocationItemList.map((nearbyLocationItem) => (
+        {personalApartmentList.map((hotel) => (
           <Grid item xs={12} md={3}>
-            <NearbyLocationItem {...nearbyLocationItem} />
+            <SpecificApartment {...hotel} />
           </Grid>
         ))}
       </Grid>

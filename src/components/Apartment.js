@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     borderRadius: 41,
   },
 });
-function Apartment({ apartment: { title, image_url, access_times } }) {
+function Apartment({ title, image_url, access_times }) {
   const classes = useStyles();
 
   return (

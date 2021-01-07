@@ -1,14 +1,21 @@
 // import React from 'react';
 import './App.css'
 
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
 import Feedbacks from './components/Feedbacks'
 import Footer from './components/footer/Footer'
-import React from 'react'
 
 import Header from './components/header/Header'
-import Apartments from './components/Apartments'
+//import Apartments from './components/Apartments'
 import NearbyLocationListItem from './components/NearbyLocationListItem'
 import FamousPlaces from './components/FamousPlaces'
+
+import Home from './pages/Home'
+import ApartmentsPage from './pages/ApartmentsPage'
+import Hotels from './pages/Hotels'
+import Coupons from './pages/Coupons'
 
 // import React, { useEffect, useState } from 'react'
 // import apartmentApi from './api/apartmentApi'
@@ -30,30 +37,39 @@ function App() {
   //   fetchApartments()
   // }, []);
 
-
-
   return (
     <div className="App">
-      
-
       {/* <div className="apartments">
         {apartments.map(apartment => (
           <Apartment apartment={apartment} />
         ))}
       </div> */}
+      <Router>
+        
+        {/* <Page />
+        <NearbyLocationListItem />
+        <FamousPlaces />
 
-      <Header/>
-      <Apartments/>
-      <NearbyLocationListItem/>
-      <FamousPlaces />
-      
+        <Feedbacks /> */}
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/hotels">
+            <Hotels />
+          </Route>
+          <Route path="/apartments-page">
+            <ApartmentsPage />
+          </Route>
+          <Route path="/coupons">
+            <Coupons />
+          </Route>
+        </Switch>
 
-      <Feedbacks/>
-
-      <Footer />
+        <Footer />
+      </Router>
     </div>
   )
 }
-
 
 export default App
