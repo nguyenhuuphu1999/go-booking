@@ -1,10 +1,10 @@
-import DatePickers from './DatePicker'
 
-function HomeSearch() {
-  var date = new Date()
-  var today = date.getFullYear()
+
+import React from 'react'
+
+const HomeSearch = () => {
   return (
-    <>
+    <div>
       <form>
         <div className="home-search">
           <div className="location-search">
@@ -13,14 +13,19 @@ function HomeSearch() {
           </div>
           <div className="check-in-search">
             <p>Check in</p>
-            <DatePickers />
-            {/* <input type="date" id="start" name="trip-start" min={today} placeholder="      Add date"/> */}
+            <input
+              type="date"
+              id="start"
+              name="trip-start"
+              value="2020-07-22"
+              placeholder="      Add date"
+            />
           </div>
           <div className="check-out-search">
             <p>Check out</p>
             <input
               type="date"
-              defaultValue={today}
+              value="2020-07-22"
               placeholder="      Add date"
             />
           </div>
@@ -30,8 +35,9 @@ function HomeSearch() {
           </div>
         </div>
       </form>
-    </>
+    </div>
   )
 }
 
 export default HomeSearch
+

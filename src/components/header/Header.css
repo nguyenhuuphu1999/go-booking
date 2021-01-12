@@ -86,16 +86,17 @@ nav {
   }
   
   .home-search input {
-    background-color: rgba(255, 255, 255, 0.63);
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
   }
   
   .location-search input {
-    width: 180px;
+    width: 171px;
     height: 39px;
   }
   
   .check-in-search input {
-    width: 110px;
+    width: 111px;
     height: 39px;
   }
   .check-out-search input {

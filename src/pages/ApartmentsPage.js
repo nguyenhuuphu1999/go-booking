@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles"
 
 import HomeSearch from '../components/header/HomeSearch'
 import Navbar from '../components/header/Navbar'
-import PersonalApartment from '../components/PersonalApartment'
+import PersonalApartment from '../components/apartmentspage_component/PersonalApartment';
 
 const useStyles = makeStyles((theme) => ({
   h3Style: {

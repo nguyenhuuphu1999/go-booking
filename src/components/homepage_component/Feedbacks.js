@@ -1,6 +1,6 @@
 import React from "react";
 import Feedback from "./Feedback";
-import { feedbackList } from "../FakeData/data";
+import { feedbackList } from "../../FakeData/data";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 

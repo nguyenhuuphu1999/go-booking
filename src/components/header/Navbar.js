@@ -15,7 +15,7 @@ function Navbar() {
             <Link to="/apartments-page">Chỗ ở riêng</Link>
           </li>
           <li>
-            <Link to="/coupons">Ưu đãi</Link>
+            <Link to="/coupons-page">Ưu đãi</Link>
           </li>
         </ul>
         <div className="sign-in">

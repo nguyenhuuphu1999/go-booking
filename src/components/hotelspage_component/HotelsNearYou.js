@@ -1,9 +1,9 @@
 import React from "react";
 
-import { hotelsNearYouList } from "../FakeData/data";
+import { hotelsNearYouList } from "../../FakeData/data";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
-import Hotel from './NearbyLocationItem';
+import Hotel from '../homepage_component/NearbyLocationItem';
 
 const useStyles = makeStyles((theme) => ({
   root: {

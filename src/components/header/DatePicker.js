@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     width: 200,
-    size: '12'
+    size: '12',
+    paddingLeft: 0
   },
   style:{
     color: 'rgb(0, 0, 0, 0.54)',

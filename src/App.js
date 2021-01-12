@@ -4,18 +4,13 @@ import './App.css'
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import Feedbacks from './components/Feedbacks'
 import Footer from './components/footer/Footer'
 
-import Header from './components/header/Header'
-//import Apartments from './components/Apartments'
-import NearbyLocationListItem from './components/NearbyLocationListItem'
-import FamousPlaces from './components/FamousPlaces'
 
 import Home from './pages/Home'
 import ApartmentsPage from './pages/ApartmentsPage'
 import Hotels from './pages/Hotels'
-import Coupons from './pages/Coupons'
+import CouponsPage from './pages/CouponsPage'
 
 // import React, { useEffect, useState } from 'react'
 // import apartmentApi from './api/apartmentApi'
@@ -61,8 +56,8 @@ function App() {
           <Route path="/apartments-page">
             <ApartmentsPage />
           </Route>
-          <Route path="/coupons">
-            <Coupons />
+          <Route path="/coupons-page">
+            <CouponsPage />
           </Route>
         </Switch>
 

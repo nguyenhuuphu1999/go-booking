@@ -1,6 +1,6 @@
 import React from "react";
 
-import { nearbyLocationItemList } from "../FakeData/data";
+import { nearbyLocationItemList } from "../../FakeData/data";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import NearbyLocationItem from './NearbyLocationItem';

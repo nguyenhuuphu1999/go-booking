@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import HomeSearch from '../components/header/HomeSearch'
 
 import Navbar from '../components/header/Navbar'
-import HotelsNearYou from '../components/HotelsNearYou'
+import HotelsNearYou from '../components/hotelspage_component/HotelsNearYou'
 
 const useStyles = makeStyles(theme => ({
   h3Style: {
