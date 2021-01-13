@@ -1,13 +1,14 @@
 import React from 'react'
-import HomeSearch from '../components/header/HomeSearch'
-import Navbar from '../components/header/Navbar'
+import Header from '../components/header/Header'
+import Coupons from '../components/couponspage_component/Coupons'
 
 const CouponsPage = () => {
-  return <div>
-    <Navbar />
-      <HomeSearch />
-  </div>
-
+  return (
+    <div>
+      <Header />
+      <Coupons />
+    </div>
+  )
 }
 
-export default CouponsPage;
+export default CouponsPage

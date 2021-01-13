@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     padding: '0 30px',
     marginBottom: 10,
     display: 'block',
-    marginLeft: 60,
+    fontSize: '16px'
   },
   button2: {
     border: '1px solid orange',
@@ -28,7 +28,7 @@ const useStyles = makeStyles({
     padding: '0 30px',
     marginBottom: 10,
     display: 'block',
-    marginLeft: 60,
+    fontSize: '16px'
   },
   button3: {
     background: '#3FAADF',
@@ -40,26 +40,34 @@ const useStyles = makeStyles({
     padding: '0 30px',
     marginBottom: 10,
     display: 'block',
-    marginLeft: 60,
-
+    fontSize: '16px'
   },
   imgStyle: {
-    borderRadius: 30
+    borderRadius: 30,
+    width: '100%',
+  },
+  alignItem : {
+    margin: '10px auto',
+    height: '50px'
+  },
+  pStyles: {
+    textAlign: 'center'
   }
 })
 
-const Coupon = () => {
+const Coupon = ({address,image_url, sale_off, exp_date}) => {
   const classes = useStyles()
   return (
     <div className={classes.stylesGrid}>
-      <Grid container spacing={3}>
+      <Grid container spacing={1}>
         <Grid item xs={6}>
-          <img className={classes.imgStyle}src="https://s3-alpha-sig.figma.com/img/dada/cdbb/eaeb6fd3a399a65ea4308aeca34ac861?Expires=1610928000&Signature=J6MHNkOKuJgB-nE4ucEgwQpzuneOI00tM6uDd2pS7ZIsYqj7aV61Xtyp4EnvwZouevQAWygutmgPauMz5ZQvs9WaDmwafwR30JfSjc9pTrH~dJAfv4q7HNoFgUvP4kbUiLpwWFk9dJZtdYfHftW4FCQFGZBZ4aYg6cGJngbQPzDiykaLTGi-4NMHROVgnX-agy~mQ1wYnC20bU3aU4Pgq49WSY8cdNXBDCL-EcSftwKTQYifkMmMU3Z0DZ5BLVCvRmZoVgxac770mNQzHVNSzvEr0LBkvGs8T9QHydZnQcLK8I2i5j3WSnthXoPtgP~7aPlmTEd7E7T2QcgkLT8aKg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" />
+          <img className={classes.imgStyle}src={image_url} />
+          <p className={classes.pStyles}>{address}</p>
         </Grid>
-        <Grid item xs={6}>
-          <Button className={classes.button1}>Giảm giá 15%</Button>
-          <Button className={classes.button2}>Còn 6 ngày</Button>
-          <Button className={classes.button3}>Nhận voucher </Button>
+        <Grid item xs={6} className={classes.alignItem}>
+          <Button className={classes.button1}>Giảm giá {sale_off}</Button>
+          <Button className={classes.button2}>{exp_date}</Button>
+          <Button className={classes.button3}>Nhận Voucher</Button>
         </Grid>
       </Grid>
     </div>
