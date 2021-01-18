@@ -20,7 +20,6 @@ function FamousPlace({ famousPlace: {image_url, address} }) {
   const classes = useStyles();
 
   return (
-    
     <CardActionArea className={classes.root}>
       <CardMedia
         className={classes.media}

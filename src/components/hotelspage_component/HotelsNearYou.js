@@ -5,10 +5,10 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import Hotel from '../homepage_component/NearbyLocationItem';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
-    width: 1350,
+    maxWidth: 1350,
     margin: 'auto',
     marginTop: 83
   },
@@ -24,7 +24,7 @@ export default function HotelsNearYou() {
 
   return (
     <div className={classes.root}>
-    <h3 className={classes.h3Style}>Khách sạn gần bạn</h3>
+      <h3 className={classes.h3Style}>Khách sạn gần bạn</h3>
       <Grid container spacing={3} align="center">
         {hotelsNearYouList.map((hotel) => (
           <Grid item xs={12} md={3}>

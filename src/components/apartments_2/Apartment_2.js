@@ -1,37 +1,39 @@
 import React from 'react'
-
-import { famousPlaceList } from '../../FakeData/data'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
-import FamousPlace from './FamousPlace'
 
-const useStyles = makeStyles(() => ({
+import HomeStay from '../homepage_component/NearbyLocationItem'
+import { homeStayList } from '../../FakeData/data'
+
+const useStyles = makeStyles(({
   root: {
     flexGrow: 1,
-    maxWidth: 1350,
+    width: 1350,
     margin: 'auto',
-    marginTop: 112,
+    marginTop: 83,
   },
   h3Style: {
     marginLeft: 30,
     fontSize: 27,
-    marginBottom: 46,
+    marginBottom: 63,
   },
 }))
 
-export default function FamousPlaces() {
+const Apartment_2 = () => {
   const classes = useStyles()
 
   return (
     <div className={classes.root}>
-      <h3 className={classes.h3Style}>Địa điểm nổi bật</h3>
+      <h3 className={classes.h3Style}>Căn hộ</h3>
       <Grid container spacing={3} align="center">
-        {famousPlaceList.map(famousPlace => (
+        {homeStayList.map(homeStay => (
           <Grid item xs={12} md={3}>
-            <FamousPlace famousPlace={famousPlace} />
+            <HomeStay {...homeStay} />
           </Grid>
         ))}
       </Grid>
     </div>
   )
 }
+
+export default Apartment_2;

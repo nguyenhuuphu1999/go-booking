@@ -296,3 +296,62 @@ export const personalApartmentList = [
   exp_date: 'Còn 6 ngày',
     }
   ]
+
+  export const homeStayList = [
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1000,
+      address: 'Hà Nội',
+      image_url:
+        'https://s3-alpha-sig.figma.com/img/ca45/e324/82198b93d2e8913104a1ac91b8234f8f?Expires=1611532800&Signature=XmoJc7vWUcJFmtG8W1K2LZoOkrWq7c8-7eEzPZwYfFLZEYs5YR3sizeUwDa33k8KXMUMfo3~mPZolgsZh9EcPy01JJlzT33UoJTfHwndfneUSShuurklCnxdUPSICqJrf3VLT58GHTQhfrD9ZRLA3MNSobEH61gaDsyCPmeyN5VW0H9I7MkKDgmmO0-vQfg6JDGlZhkVrw2eBsqtHyHytz3WTsbHkSSD04Eci54APBPeFnhjkiZCIkaPQla5UkUE3FZJMJq13~ddm7-M6Ht-7-8p1UFXz0qdWPu5i4pUrLMr9tybXmVmNbZeVf2tTqIkjLSKPm90boIBIPcL-LS7ew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1200,
+      address: 'Hà Nội',
+      image_url:
+        'https://s3-alpha-sig.figma.com/img/ca45/e324/82198b93d2e8913104a1ac91b8234f8f?Expires=1611532800&Signature=XmoJc7vWUcJFmtG8W1K2LZoOkrWq7c8-7eEzPZwYfFLZEYs5YR3sizeUwDa33k8KXMUMfo3~mPZolgsZh9EcPy01JJlzT33UoJTfHwndfneUSShuurklCnxdUPSICqJrf3VLT58GHTQhfrD9ZRLA3MNSobEH61gaDsyCPmeyN5VW0H9I7MkKDgmmO0-vQfg6JDGlZhkVrw2eBsqtHyHytz3WTsbHkSSD04Eci54APBPeFnhjkiZCIkaPQla5UkUE3FZJMJq13~ddm7-M6Ht-7-8p1UFXz0qdWPu5i4pUrLMr9tybXmVmNbZeVf2tTqIkjLSKPm90boIBIPcL-LS7ew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 3000,
+      address: 'Hà Nội',
+      image_url:
+        'https://s3-alpha-sig.figma.com/img/ca45/e324/82198b93d2e8913104a1ac91b8234f8f?Expires=1611532800&Signature=XmoJc7vWUcJFmtG8W1K2LZoOkrWq7c8-7eEzPZwYfFLZEYs5YR3sizeUwDa33k8KXMUMfo3~mPZolgsZh9EcPy01JJlzT33UoJTfHwndfneUSShuurklCnxdUPSICqJrf3VLT58GHTQhfrD9ZRLA3MNSobEH61gaDsyCPmeyN5VW0H9I7MkKDgmmO0-vQfg6JDGlZhkVrw2eBsqtHyHytz3WTsbHkSSD04Eci54APBPeFnhjkiZCIkaPQla5UkUE3FZJMJq13~ddm7-M6Ht-7-8p1UFXz0qdWPu5i4pUrLMr9tybXmVmNbZeVf2tTqIkjLSKPm90boIBIPcL-LS7ew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1000,
+      address: 'Hà Nội',
+      image_url:
+        'https://s3-alpha-sig.figma.com/img/ca45/e324/82198b93d2e8913104a1ac91b8234f8f?Expires=1611532800&Signature=XmoJc7vWUcJFmtG8W1K2LZoOkrWq7c8-7eEzPZwYfFLZEYs5YR3sizeUwDa33k8KXMUMfo3~mPZolgsZh9EcPy01JJlzT33UoJTfHwndfneUSShuurklCnxdUPSICqJrf3VLT58GHTQhfrD9ZRLA3MNSobEH61gaDsyCPmeyN5VW0H9I7MkKDgmmO0-vQfg6JDGlZhkVrw2eBsqtHyHytz3WTsbHkSSD04Eci54APBPeFnhjkiZCIkaPQla5UkUE3FZJMJq13~ddm7-M6Ht-7-8p1UFXz0qdWPu5i4pUrLMr9tybXmVmNbZeVf2tTqIkjLSKPm90boIBIPcL-LS7ew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1000,
+      address: 'Hà Nội',
+      image_url:
+        'https://s3-alpha-sig.figma.com/img/ca45/e324/82198b93d2e8913104a1ac91b8234f8f?Expires=1611532800&Signature=XmoJc7vWUcJFmtG8W1K2LZoOkrWq7c8-7eEzPZwYfFLZEYs5YR3sizeUwDa33k8KXMUMfo3~mPZolgsZh9EcPy01JJlzT33UoJTfHwndfneUSShuurklCnxdUPSICqJrf3VLT58GHTQhfrD9ZRLA3MNSobEH61gaDsyCPmeyN5VW0H9I7MkKDgmmO0-vQfg6JDGlZhkVrw2eBsqtHyHytz3WTsbHkSSD04Eci54APBPeFnhjkiZCIkaPQla5UkUE3FZJMJq13~ddm7-M6Ht-7-8p1UFXz0qdWPu5i4pUrLMr9tybXmVmNbZeVf2tTqIkjLSKPm90boIBIPcL-LS7ew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1200,
+      address: 'Hà Nội',
+      image_url:
+        'https://s3-alpha-sig.figma.com/img/ca45/e324/82198b93d2e8913104a1ac91b8234f8f?Expires=1611532800&Signature=XmoJc7vWUcJFmtG8W1K2LZoOkrWq7c8-7eEzPZwYfFLZEYs5YR3sizeUwDa33k8KXMUMfo3~mPZolgsZh9EcPy01JJlzT33UoJTfHwndfneUSShuurklCnxdUPSICqJrf3VLT58GHTQhfrD9ZRLA3MNSobEH61gaDsyCPmeyN5VW0H9I7MkKDgmmO0-vQfg6JDGlZhkVrw2eBsqtHyHytz3WTsbHkSSD04Eci54APBPeFnhjkiZCIkaPQla5UkUE3FZJMJq13~ddm7-M6Ht-7-8p1UFXz0qdWPu5i4pUrLMr9tybXmVmNbZeVf2tTqIkjLSKPm90boIBIPcL-LS7ew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 3000,
+      address: 'Hà Nội',
+      image_url:
+        'https://s3-alpha-sig.figma.com/img/ca45/e324/82198b93d2e8913104a1ac91b8234f8f?Expires=1611532800&Signature=XmoJc7vWUcJFmtG8W1K2LZoOkrWq7c8-7eEzPZwYfFLZEYs5YR3sizeUwDa33k8KXMUMfo3~mPZolgsZh9EcPy01JJlzT33UoJTfHwndfneUSShuurklCnxdUPSICqJrf3VLT58GHTQhfrD9ZRLA3MNSobEH61gaDsyCPmeyN5VW0H9I7MkKDgmmO0-vQfg6JDGlZhkVrw2eBsqtHyHytz3WTsbHkSSD04Eci54APBPeFnhjkiZCIkaPQla5UkUE3FZJMJq13~ddm7-M6Ht-7-8p1UFXz0qdWPu5i4pUrLMr9tybXmVmNbZeVf2tTqIkjLSKPm90boIBIPcL-LS7ew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1000,
+      address: 'Hà Nội',
+      image_url:
+        'https://s3-alpha-sig.figma.com/img/ca45/e324/82198b93d2e8913104a1ac91b8234f8f?Expires=1611532800&Signature=XmoJc7vWUcJFmtG8W1K2LZoOkrWq7c8-7eEzPZwYfFLZEYs5YR3sizeUwDa33k8KXMUMfo3~mPZolgsZh9EcPy01JJlzT33UoJTfHwndfneUSShuurklCnxdUPSICqJrf3VLT58GHTQhfrD9ZRLA3MNSobEH61gaDsyCPmeyN5VW0H9I7MkKDgmmO0-vQfg6JDGlZhkVrw2eBsqtHyHytz3WTsbHkSSD04Eci54APBPeFnhjkiZCIkaPQla5UkUE3FZJMJq13~ddm7-M6Ht-7-8p1UFXz0qdWPu5i4pUrLMr9tybXmVmNbZeVf2tTqIkjLSKPm90boIBIPcL-LS7ew__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
+    }
+  ]

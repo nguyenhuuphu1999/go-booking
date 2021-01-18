@@ -11,6 +11,7 @@ import Home from './pages/Home'
 import ApartmentsPage from './pages/ApartmentsPage'
 import Hotels from './pages/Hotels'
 import CouponsPage from './pages/CouponsPage'
+import HomeStayPage from './pages/HomeStayPage'
 
 // import React, { useEffect, useState } from 'react'
 // import apartmentApi from './api/apartmentApi'
@@ -58,6 +59,9 @@ function App() {
           </Route>
           <Route path="/coupons-page">
             <CouponsPage />
+          </Route>
+          <Route path="/home-stay">
+            <HomeStayPage />
           </Route>
         </Switch>
 
