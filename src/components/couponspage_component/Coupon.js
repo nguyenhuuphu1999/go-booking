@@ -61,7 +61,7 @@ const Coupon = ({address,image_url, sale_off, exp_date}) => {
     <div className={classes.stylesGrid}>
       <Grid container spacing={1}>
         <Grid item xs={6}>
-          <img className={classes.imgStyle}src={image_url} />
+          <img className={classes.imgStyle}src={image_url} alt="" />
           <p className={classes.pStyles}>{address}</p>
         </Grid>
         <Grid item xs={6} className={classes.alignItem}>

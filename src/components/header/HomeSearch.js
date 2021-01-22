@@ -9,7 +9,7 @@ const HomeSearch = () => {
         <div className="home-search">
           <div className="location-search">
             <p>Location</p>
-            <input type="text" placeholder="     Where are you going?" />
+            <input type="text" placeholder="Where are you going?" />
           </div>
           <div className="check-in-search">
             <p>Check in</p>
@@ -18,7 +18,7 @@ const HomeSearch = () => {
               id="start"
               name="trip-start"
               value="2020-07-22"
-              placeholder="      Add date"
+              placeholder="Add date"
             />
           </div>
           <div className="check-out-search">
@@ -26,12 +26,12 @@ const HomeSearch = () => {
             <input
               type="date"
               value="2020-07-22"
-              placeholder="      Add date"
+              placeholder="Add date"
             />
           </div>
           <div className="guests-search">
             <p>Guests</p>
-            <input type="text" placeholder="     Add guests" />
+            <input type="text" placeholder="Add guests" />
           </div>
         </div>
       </form>

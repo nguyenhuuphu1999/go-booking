@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { famousPlaceList } from '../../FakeData/data'
 import Grid from '@material-ui/core/Grid'
@@ -28,7 +29,10 @@ export default function FamousPlaces() {
       <Grid container spacing={3} align="center">
         {famousPlaceList.map(famousPlace => (
           <Grid item xs={12} md={3}>
-            <FamousPlace famousPlace={famousPlace} />
+            <Link
+              to={`/famous-place?famousPlaceId=${famousPlace._id}`}>
+              <FamousPlace famousPlace={famousPlace} />
+            </Link>
           </Grid>
         ))}
       </Grid>

@@ -9,12 +9,10 @@ const nav = {
   height: '76px',
   position: 'fixed',
   color: '#fff',
-}
-const container = {
+  padding: '0 30px',
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
-  maxWidth: 1350,
 }
 
 const logo = {
@@ -37,10 +35,9 @@ const liStyle = {
 function Navbar() {
   return (
     <nav style={nav}>
-      <div style={container}>
         <div style={ulStyle}>
           <i style={liStyle}>
-            <img style={logo} src={GoLogo} alt="" />
+            <Link to="/home"> <img style={logo} src={GoLogo} alt="" /></Link>  
           </i>
           <ul style={ulStyle}>
             <li style={liStyle}>
@@ -56,12 +53,11 @@ function Navbar() {
         </div>
 
         <div style={ulStyle}>
-          <Link to="/Become a part of us">Become a part of us</Link>
-          <i>
-            <img src={User} alt="" />
+          <Link to="/become-a-partner">Become a part of us</Link>
+          <i style={{marginLeft: '30px'}}>
+            <img style={logo} src={User} alt="" />
           </i>
         </div>
-      </div>
     </nav>
   )
 }

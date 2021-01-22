@@ -12,6 +12,10 @@ import ApartmentsPage from './pages/ApartmentsPage'
 import Hotels from './pages/Hotels'
 import CouponsPage from './pages/CouponsPage'
 import HomeStayPage from './pages/HomeStayPage'
+import Availability from './pages/Availability'
+import PartnerPage from './pages/PartnerPage'
+import RoomDetailPage from './pages/RoomDetailPage'
+
 
 // import React, { useEffect, useState } from 'react'
 // import apartmentApi from './api/apartmentApi'
@@ -51,6 +55,9 @@ function App() {
           <Route path="/" exact>
             <Home />
           </Route>
+          <Route path="/home" exact>
+            <Home />
+          </Route>
           <Route path="/hotels">
             <Hotels />
           </Route>
@@ -62,6 +69,15 @@ function App() {
           </Route>
           <Route path="/home-stay">
             <HomeStayPage />
+          </Route>
+          <Route path="/famous-place">
+            <Availability />
+          </Route>
+          <Route path="/become-a-partner">
+            <PartnerPage />
+          </Route>
+          <Route path="/near-by-location">
+            <RoomDetailPage />
           </Route>
         </Switch>
 

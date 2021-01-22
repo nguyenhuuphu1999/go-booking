@@ -21,7 +21,9 @@ const Location = ({ image_url, location, amount, description }) => {
   const container = {
     maxWidth: '1350px',
     display: 'flex',
-    boxSizing: 'border-box'
+    boxSizing: 'border-box',
+    justifyContent: 'center',
+    margin: ' 0 auto'
   }
   const leftBlock = {
       marginLeft: '27px',
