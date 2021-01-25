@@ -14,14 +14,14 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function ApartmentList() {
+export default function ApartmentList({ apartments }) {
   const classes = useStyles()
 
   return (
     <div className="container">
       <div className={classes.root}>
         <Grid container spacing={3} align="center">
-          {apartmentList.map(apartment => (
+          {apartments.map(apartment => (
             <Grid item xs={12} md={3}>
               <Link to={`/home-stay?apartmentId=${apartment._id}`}>
                 <Apartment {...apartment} />

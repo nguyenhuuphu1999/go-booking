@@ -4,11 +4,13 @@ import Navbar from '../components/header/Navbar'
 import Banner2 from '../components/partner/Banner2'
 import Works from '../components/partner/Works'
 import Support from '../components/partner/Support'
+import Content from '../components/partner/Content'
 
 const PartnerPage = () => {
     return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
+            <Content />
             <div>
                 <Banner2 />
                 <Works/>

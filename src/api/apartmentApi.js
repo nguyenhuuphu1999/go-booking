@@ -2,8 +2,8 @@ import axiosClient from './axiosClient';
 
 const apartmentApi = {
     getAll: (params) => {
-    const url = '/apartment';
-    return axiosClient.get(url, { params });
+        const url = '/apartment';
+        return axiosClient.get(url, { params });
     },
 
     get: (id) => {
