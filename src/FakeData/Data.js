@@ -248,22 +248,19 @@ export const personalApartmentList = [
 
   export const feedbackList = [
     {
-      place: 'VeeVoo Hotel',
-      city: 'Vũng Tàu',
+      img: 'https://s3-alpha-sig.figma.com/img/8cc5/e2b6/0f144beca355eabef10ea38fdace8e12?Expires=1612742400&Signature=ExUM2oE79hc0piTY2r9PwxcZVW4~Vjo2T7jL5qNE6IjuN0AEC1D9mxOFV9ecfMoU4bd7J0~WIkvUmG1rPYRTTUvt8c6zJvdLnznegMqJw1RxAJrxvurKgkgCZ7dg7ujqmopKUTTfcZAiZ01b3lGOtLTjwxUmY5vd8nUjdYxYyQ~UJ5ctYIeW9uqPgPz2GcixkvBvwNo-QSKZXkiI7fJNf239WJFLOiEl1eGnPYz1fybw2uIKugQuwhwRPctUecPpv8VRaQg8VhBK1iatxevaP29A0AHmAohAanDsLkQC54zGFJcFwuGq92EffuTYt5~ia42YeGGd5UETcf2DFRaYcA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
       content:
         'Nhà mình đi cùng em bé nên có ghi rõ trong phần yêu cầu đặc biệt trên GO lúc đặt phòng. Nhân viên khách sạn rất tận tình và chu đáo. Cả nhà mình đã có một kỳ nghỉ thật tuyệt, rất đáng giới thiệu cho mọi người!',
       by: 'Chị Thu, Hà Nội',
     },
     {
-      place: 'Serena Nha Trang Hotel ',
-      city: 'Nha Trang',
+      img: 'https://s3-alpha-sig.figma.com/img/8cc5/e2b6/0f144beca355eabef10ea38fdace8e12?Expires=1612742400&Signature=ExUM2oE79hc0piTY2r9PwxcZVW4~Vjo2T7jL5qNE6IjuN0AEC1D9mxOFV9ecfMoU4bd7J0~WIkvUmG1rPYRTTUvt8c6zJvdLnznegMqJw1RxAJrxvurKgkgCZ7dg7ujqmopKUTTfcZAiZ01b3lGOtLTjwxUmY5vd8nUjdYxYyQ~UJ5ctYIeW9uqPgPz2GcixkvBvwNo-QSKZXkiI7fJNf239WJFLOiEl1eGnPYz1fybw2uIKugQuwhwRPctUecPpv8VRaQg8VhBK1iatxevaP29A0AHmAohAanDsLkQC54zGFJcFwuGq92EffuTYt5~ia42YeGGd5UETcf2DFRaYcA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
       content:
         'Tôi hoàn toàn hài lòng khi nghỉ tại Nha Trang. Cám ơn GO rất nhiều.',
       by: 'Anh Phú, Bình Định',
     },
     {
-      place: 'VeeVoo Hotel',
-      city: 'Vũng Tàu',
+      img: 'https://s3-alpha-sig.figma.com/img/8cc5/e2b6/0f144beca355eabef10ea38fdace8e12?Expires=1612742400&Signature=ExUM2oE79hc0piTY2r9PwxcZVW4~Vjo2T7jL5qNE6IjuN0AEC1D9mxOFV9ecfMoU4bd7J0~WIkvUmG1rPYRTTUvt8c6zJvdLnznegMqJw1RxAJrxvurKgkgCZ7dg7ujqmopKUTTfcZAiZ01b3lGOtLTjwxUmY5vd8nUjdYxYyQ~UJ5ctYIeW9uqPgPz2GcixkvBvwNo-QSKZXkiI7fJNf239WJFLOiEl1eGnPYz1fybw2uIKugQuwhwRPctUecPpv8VRaQg8VhBK1iatxevaP29A0AHmAohAanDsLkQC54zGFJcFwuGq92EffuTYt5~ia42YeGGd5UETcf2DFRaYcA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
       content:
         'Nhà mình đi cùng em bé nên có ghi rõ trong phần yêu cầu đặc biệt trên GO lúc đặt phòng. Nhân viên khách sạn rất tận tình và chu đáo. Cả nhà mình đã có một kỳ nghỉ thật tuyệt, rất đáng giới thiệu cho mọi người!',
       by: 'Chị Thu, Hà Nội',

@@ -1,19 +1,17 @@
-import { makeStyles } from '@material-ui/core/styles'
 
-const useStyles = makeStyles(() => ({
-  root: {
-    color: 'red',
-  },
-}))
 
-function Feedback({ feedback: { place, city, content, by } }) {
-  const classes = useStyles()
+function Feedback({ feedback: { img, content, by } }) {
+
+  const imgStyle = {
+    borderRadius:'50%',
+    width:'190px',
+    height:'184px'
+  }
 
   return (
     <div className="feedback">
-      <h4 className={classes.root}>{place}</h4>
-      <span>{city}</span>
-      <p>{content}</p>
+      <div><img style={imgStyle} src={img} alt=""/></div>
+      <p style={{marginBottom: '50px'}}>{content}</p>
       <p>{by}</p>
     </div>
   )

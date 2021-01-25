@@ -10,6 +10,7 @@ const useStyles = makeStyles(() => ({
     maxWidth: 1350,
     margin: 'auto',
     marginTop: 140,
+    fontSize: '16px',
   },
   h3Style: {
     marginLeft: 30,
@@ -23,7 +24,6 @@ export default function ApartmentList() {
 
   return (
     <div className={classes.root}>
-      <h3 className={classes.h3Style}>Phản hồi tích cực</h3>
       <Grid container spacing={3} align="center" justify="space-around">
         {feedbackList.map((feedback) => (
           <Grid item xs={12} md={3}>
