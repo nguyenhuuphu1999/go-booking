@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 
 import HomeStay from '../homepage_component/NearbyLocationItem'
-import { homeStayList } from '../../FakeData/data'
+// import { homeStayList } from '../../FakeData/data'
 
 const useStyles = makeStyles(({
   root: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles(({
   },
 }))
 
-const HomeStayNearYou = () => {
+const HomeStayNearYou = ({homeStayList}) => {
   const classes = useStyles()
 
   return (

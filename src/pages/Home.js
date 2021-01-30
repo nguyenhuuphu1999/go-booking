@@ -15,15 +15,15 @@ const Home = () => {
     dispatch(fetchHomes())
   }, [dispatch])
 
-  const apartments = useSelector(state => state.home.apartment)
-  const famousPlaces = useSelector(state => state.home.diaDiemNoiBat)
+  const apartments = useSelector(state => state.home.typeHouse)
+  const nearbyLocationItemList = useSelector(state => state.home.apartment)
 
   return (
     <div>
       <Header />
       <Apartments apartments={apartments} />
-      <NearbyLocationListItem />
-      <FamousPlaces famousPlaces={famousPlaces} />
+      <NearbyLocationListItem nearbyLocationItemList={nearbyLocationItemList}  />
+      <FamousPlaces />
     </div>
   )
 }

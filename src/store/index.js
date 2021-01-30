@@ -2,11 +2,11 @@ import { configureStore } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 
 import home from './home';
-import hotels from './hotels';
+import homeStay from './homeStay';
 
 const rootReducer = combineReducers({
     home,
-    hotels
+    homeStay
 });
 
 const store = configureStore({

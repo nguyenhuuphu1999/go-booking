@@ -3,7 +3,7 @@ import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import { Link } from 'react-router-dom'
 
-import { nearbyLocationItemList } from '../../FakeData/data'
+// import { nearbyLocationItemList } from '../../FakeData/data'
 import NearbyLocationItem from './NearbyLocationItem'
 
 const useStyles = makeStyles(theme => ({
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function NearbyLocationItemList() {
+export default function NearbyLocationItemList({nearbyLocationItemList}) {
   const classes = useStyles()
 
   return (

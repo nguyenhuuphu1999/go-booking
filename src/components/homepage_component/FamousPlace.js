@@ -9,14 +9,16 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 288,
     maxHeight: 345,
+    color: "black",
   },
   media: {
     height: 125,
     width: 184,
     borderRadius: 41,
+    marginBottom: '5px'
   },
 });
-function FamousPlace({ famousPlace: {image_url, address} }) {
+function FamousPlace({ famousPlace: {image_url, name_city} }) {
   const classes = useStyles();
 
   return (
@@ -27,7 +29,7 @@ function FamousPlace({ famousPlace: {image_url, address} }) {
         title="Contemplative Reptile"
       />
       <Typography gutterBottom align="center" component="h2">
-        {address}
+        {name_city}
       </Typography>
     </CardActionArea>
   );

@@ -6,6 +6,11 @@ import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import FamousPlace from './FamousPlace'
 
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+
+import { fetchHomes } from '../../store/home'
+
 const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
@@ -20,8 +25,17 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function FamousPlaces({famousPlaces}) {
+export default function FamousPlaces() {
   const classes = useStyles()
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchHomes())
+  }, [dispatch])
+
+  const famousPlaces = useSelector(state => state.home.diaDiemNoiBat)
+
 
   return (
     <div className={classes.root}>

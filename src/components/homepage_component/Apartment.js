@@ -14,27 +14,25 @@ const useStyles = makeStyles({
     height: 160,
     width: 240,
     borderRadius: 41,
+    marginBottom: '5px'
   },
+  homeStay: {
+    zIndex: 10,
+    color: 'black'
+  }
 })
-function Apartment({ id, id_city, id_type_house, apartment_name, price, ratings }) {
+function Apartment({ image_url, title }) {
   const classes = useStyles()
 
   return (
       <CardActionArea className={classes.root}>
         <CardMedia
           className={classes.media}
-          // image={image_url}
+          image={image_url}
           title="Contemplative Reptile"
         />
-        <Typography gutterBottom align="center" variant="h6" component="h2">
-          {apartment_name}
-        </Typography>
-        <Typography
-          align="center"
-          variant="body2"
-          color="textSecondary"
-          component="p">
-          {price}
+        <Typography gutterBottom align="center" variant="h6" component="h2" className={classes.homeStay}>
+          {title}
         </Typography>
       </CardActionArea>
   )
