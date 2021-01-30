@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     borderRadius: 41,
   },
 });
-function NearbyLocationItem({ description, image_url, address, price}) {
+function NearbyLocationItem({description, image_url, address, price}) {
   const classes = useStyles();
 
   return (

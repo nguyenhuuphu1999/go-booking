@@ -1,24 +1,28 @@
-import { createSlice } from '@reduxjs/toolkit';
-import apartmentApi from '../api/apartmentApi';
+import { createSlice } from '@reduxjs/toolkit'
+import homeApi from '../api/homeApi'
 
 const homeSlice = createSlice({
-    name: 'home',
-    initialState: {
-        apartments: [],
+  name: 'home',
+  initialState: {
+    apartment: [],
+    typeHouse: [],
+    diaDiemNoiBat: [],
+    comment: [],
+  },
+  reducers: {
+    fetchHomesSuccess(state, action) {
+      state = action.payload
+      return state
     },
-    reducers: {
-      fetchApartmentsSuccess(state, action) {
-          state.apartments = action.payload;
-      }
-    }
-});
+  },
+})
 
-const { fetchApartmentsSuccess } = homeSlice.actions;
+const { fetchHomesSuccess } = homeSlice.actions
 
 // async action
-export const fetchApartments = () => async dispatch => {
-    const res = await apartmentApi.getAll();
-    return dispatch(fetchApartmentsSuccess(res.data));
+export const fetchHomes = () => async dispatch => {
+  const res = await homeApi.getAll()
+  return dispatch(fetchHomesSuccess(res.data))
 }
 
-export default homeSlice.reducer;
+export default homeSlice.reducer

@@ -16,25 +16,25 @@ const useStyles = makeStyles({
     borderRadius: 41,
   },
 })
-function Apartment({ title, image_url, access_times }) {
+function Apartment({ id, id_city, id_type_house, apartment_name, price, ratings }) {
   const classes = useStyles()
 
   return (
       <CardActionArea className={classes.root}>
         <CardMedia
           className={classes.media}
-          image={image_url}
+          // image={image_url}
           title="Contemplative Reptile"
         />
         <Typography gutterBottom align="center" variant="h6" component="h2">
-          {title}
+          {apartment_name}
         </Typography>
         <Typography
           align="center"
           variant="body2"
           color="textSecondary"
           component="p">
-          {access_times}
+          {price}
         </Typography>
       </CardActionArea>
   )

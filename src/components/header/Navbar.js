@@ -13,6 +13,8 @@ const nav = {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+  top: '0',
+  left: '0'
 }
 
 const logo = {

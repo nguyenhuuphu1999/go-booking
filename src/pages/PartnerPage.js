@@ -9,7 +9,7 @@ import Content from '../components/partner/Content'
 const PartnerPage = () => {
     return (
         <div>
-            {/* <Navbar /> */}
+            <Navbar />
             <Content />
             <div>
                 <Banner2 />

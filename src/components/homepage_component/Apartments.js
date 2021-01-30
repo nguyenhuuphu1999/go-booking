@@ -1,6 +1,6 @@
 import React from 'react'
 import Apartment from './Apartment'
-import { apartmentList } from '../../FakeData/data'
+// import { apartmentList } from '../../FakeData/data'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles } from '@material-ui/core/styles'
 import { Link } from 'react-router-dom'
@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function ApartmentList({ apartments }) {
+export default function ApartmentList({apartments}) {
   const classes = useStyles()
 
   return (
