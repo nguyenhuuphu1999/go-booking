@@ -6,7 +6,7 @@ const homeApi = {
     return axiosClient.get(url, { params });
   },
 
-  get: id => {
+  get: id => { 
     const url = `/home/${id}`;
     return axiosClient.get(url);
   },

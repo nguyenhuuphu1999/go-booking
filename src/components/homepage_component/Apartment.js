@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     color: 'black'
   }
 })
-function Apartment({ image_url, title }) {
+function Apartment({ image_url, title }) { 
   const classes = useStyles()
 
   return (

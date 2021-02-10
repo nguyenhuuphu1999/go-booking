@@ -22,7 +22,7 @@ const Home = () => {
     <div>
       <Header />
       <Apartments apartments={apartments} />
-      <NearbyLocationListItem nearbyLocationItemList={nearbyLocationItemList}  />
+      <NearbyLocationListItem nearbyLocationItemList={nearbyLocationItemList} />
       <FamousPlaces />
     </div>
   )

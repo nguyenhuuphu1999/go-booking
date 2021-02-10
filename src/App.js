@@ -15,6 +15,7 @@ import HomeStayPage from './pages/HomeStayPage'
 import Availability from './pages/Availability'
 import PartnerPage from './pages/PartnerPage'
 import RoomDetailPage from './pages/RoomDetailPage'
+import BookingPage from './pages/BookingPage'
 
 
 // import React, { useEffect, useState } from 'react'
@@ -39,18 +40,8 @@ function App() {
 
   return (
     <div className="App">
-      {/* <div className="apartments">
-        {apartments.map(apartment => (
-          <Apartment apartment={apartment} />
-        ))}
-      </div> */}
       <Router>
         
-        {/* <Page />
-        <NearbyLocationListItem />
-        <FamousPlaces />
-
-        <Feedbacks /> */}
         <Switch>
           <Route path="/" exact>
             <Home />
@@ -67,10 +58,10 @@ function App() {
           <Route path="/coupons-page">
             <CouponsPage />
           </Route>
-          <Route path="/home-stay">
-            <HomeStayPage />
+          <Route path="/apartments/:id">
+            <HomeStayPage /> 
           </Route>
-          <Route path="/famous-place">
+          <Route path="/cities/:id">
             <Availability />
           </Route>
           <Route path="/become-a-partner">
@@ -78,6 +69,9 @@ function App() {
           </Route>
           <Route path="/near-by-location">
             <RoomDetailPage />
+          </Route>
+          <Route path="/booking/:id">
+            <BookingPage />
           </Route>
         </Switch>
 

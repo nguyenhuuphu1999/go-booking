@@ -4,7 +4,9 @@ import homeStayApi from '../api/homeStayApi'
 const homeStaySlice = createSlice({
   name: 'homeStay',
   initialState: {
+    typeHouse: [],
     typeApartment: [],
+    RattingGood: []
   },
   reducers: {
     fetchHomeStaySuccess(state, action) {
@@ -17,8 +19,8 @@ const homeStaySlice = createSlice({
 const { fetchHomeStaySuccess } = homeStaySlice.actions
 
 // async action
-export const fetchHomeStay = () => async dispatch => {
-  const res = await homeStayApi.getAll()
+export const fetchHomeStay = (id) => async dispatch => {
+  const res = await homeStayApi.get(id)
   return dispatch(fetchHomeStaySuccess(res))
 }
 

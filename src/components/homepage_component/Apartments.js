@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-export default function ApartmentList({apartments}) {
+export default function ApartmentList({ apartments }) {
   const classes = useStyles()
 
   return (
@@ -22,9 +22,10 @@ export default function ApartmentList({apartments}) {
       <div className={classes.root}>
         <Grid container spacing={3} align="center">
           {apartments.map(apartment => (
-            <Grid item xs={12} md={3}>
-              <Link to={`/home-stay?apartmentId=${apartment._id}`}>
-                <Apartment {...apartment} />
+            <Grid item xs={12} sm={6} md={3}>
+              {/* <Link to={`/home-stay?apartmentId=${apartment.id}`}> */}
+              <Link to={`/apartments/${apartment.id}`}>
+                <Apartment key={apartment.id} {...apartment} />
               </Link>
               {/* react router query params */}
             </Grid>

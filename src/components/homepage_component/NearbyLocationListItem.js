@@ -28,8 +28,8 @@ export default function NearbyLocationItemList({nearbyLocationItemList}) {
       <h3 className={classes.h3Style}>Gần bạn</h3>
       <Grid container spacing={3} align="center">
         {nearbyLocationItemList.map(nearbyLocationItem => (
-          <Grid item xs={12} md={3}>
-            <Link to={`/near-by-location?nearbyLocationItemId=${nearbyLocationItem._id}`}>
+          <Grid item xs={12} sm={6} md={3}>
+            <Link to={`/booking/${nearbyLocationItem.id}`}>
               <NearbyLocationItem {...nearbyLocationItem} />
             </Link>
           </Grid>

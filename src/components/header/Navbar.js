@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 
 import GoLogo from '../../img/go-logo.png'
-import User from '../../img/person-circle-sharp.svg'
+// import User from '../../img/person-circle-sharp.svg'
+
+import UserIcon from '../user/UserIcon'
 
 const nav = {
   width: '100%',
@@ -56,9 +58,10 @@ function Navbar() {
 
         <div style={ulStyle}>
           <Link to="/become-a-partner">Become a part of us</Link>
-          <i style={{marginLeft: '30px'}}>
+          {/* <i style={{marginLeft: '30px'}}>
             <img style={logo} src={User} alt="" />
-          </i>
+          </i> */}
+          <UserIcon/>
         </div>
     </nav>
   )

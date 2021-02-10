@@ -10,28 +10,30 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { fetchHomes } from '../../store/home'
+import { useParams } from 'react-router-dom'
 
 const useStyles = makeStyles(() => ({
   root: {
     flexGrow: 1,
     maxWidth: 1350,
     margin: 'auto',
-    marginTop: 112,
+    marginTop: 50,
   },
   h3Style: {
     marginLeft: 30,
     fontSize: 27,
     marginBottom: 46,
-  },
+  }, 
 }))
 
 export default function FamousPlaces() {
   const classes = useStyles()
 
   const dispatch = useDispatch()
+  const { id } = useParams()
 
-  useEffect(() => {
-    dispatch(fetchHomes())
+  useEffect(() => { 
+    dispatch(fetchHomes(id))
   }, [dispatch])
 
   const famousPlaces = useSelector(state => state.home.diaDiemNoiBat)
@@ -42,9 +44,9 @@ export default function FamousPlaces() {
       <h3 className={classes.h3Style}>Địa điểm nổi bật</h3>
       <Grid container spacing={3} align="center">
         {famousPlaces.map(famousPlace => (
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} sm={6} md={3}>
             <Link
-              to={`/famous-place?famousPlaceId=${famousPlace._id}`}>
+              to={`/cities/${famousPlace.id}`}>
               <FamousPlace famousPlace={famousPlace} />
             </Link>
           </Grid>

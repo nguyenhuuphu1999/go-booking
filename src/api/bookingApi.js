@@ -1,16 +1,16 @@
 import axiosClient from './axiosClient'
 
 
-const homeStayApi = {
+const bookingApi = {   
   // getAll: params => {
-  //   const url = `/apartments/4/typeApartment`;
+  //   const url = `/apartments/9/detail`;
   //   return axiosClient.get(url, { params });
   // },
 
   get: id => {
-    const url = `/apartments/${id}/typeApartment`;
+    const url = `/apartments/${id}/detail`;
     return axiosClient.get(url);
-  },  
+  }, 
 }
 
-export default homeStayApi;
+export default bookingApi;

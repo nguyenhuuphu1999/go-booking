@@ -5,9 +5,8 @@ import CardActionArea from '@material-ui/core/CardActionArea'
 import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 
-//rating
-import Rating from '@material-ui/lab/Rating'
-import Box from '@material-ui/core/Box'
+import CustomRating from './CustomRating'
+
 
 const useStyles = makeStyles({
   root: {
@@ -15,21 +14,19 @@ const useStyles = makeStyles({
     maxHeight: 345,
     color: 'black',
     fontSize: '16px',
-    fontWeight: 200
+    fontWeight: 200,
   },
   media: {
     height: 220,
-    width: 288,
     borderRadius: 41,
-    marginBottom: '5px'
+    marginBottom: '5px',
   },
   priceStyle: {
-    marginTop: '0px'
+    marginTop: '0px',
   },
   ratingStyle: {
-    marginBottom: '0px'
-  }
-
+    marginBottom: '0px',
+  },
 })
 function NearbyLocationItem({
   apartment_name,
@@ -37,7 +34,7 @@ function NearbyLocationItem({
   ratings,
   address,
   price,
-  apartment_image
+  apartment_image,
 }) {
   const classes = useStyles()
 
@@ -45,7 +42,7 @@ function NearbyLocationItem({
     <CardActionArea className={classes.root}>
       <CardMedia
         className={classes.media}
-        image={ image_url ?? apartment_image.url_image }
+        image={image_url ?? apartment_image.url_image}
         title="Contemplative Reptile"
       />
       <Typography gutterBottom align="center" component="h3">
@@ -59,28 +56,18 @@ function NearbyLocationItem({
         {address}
       </Typography>
       <CustomRating ratings={ratings} />
-      <Typography className={classes.priceStyle}
+      <Typography
+        className={classes.priceStyle}
         align="center"
         variant="body2"
         color="textSecondary"
         component="p">
         Giá: {price}$/đêm
-      </Typography>     
+      </Typography>
     </CardActionArea>
   )
 }
 
 export default NearbyLocationItem
 
-//rating
-export function CustomRating({ ratings }) {
 
-  const classes = useStyles()
-  return (
-    <div>
-      <Box className={classes.ratingStyle} component="fieldset" mb={3} borderColor="transparent">
-        <Rating name="read-only" value={ratings} readOnly />
-      </Box>
-    </div>
-  )
-}

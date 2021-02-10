@@ -14,16 +14,12 @@ const item =
     img3:
       'https://s3-alpha-sig.figma.com/img/6945/19b7/7f0f65d6c0cdda1a01a7485462a09c08?Expires=1612137600&Signature=Sw0Ku2p~VeMjSYzfTveAuQlzIXQBNZosSGtO-YN1q-TMP2xY4VoE7EohoiTdK4-g5BCb1TzCCCbIvFgefM48pN0DoYH3enoFHGgoLGZix7pNLU41yCHSSI1KB0daOFmu9MwZBucBBid094Z1WHjZ13V5jMp~nkxN6zSqM7~4iS0ybcWsk~UCQOuwvi8mo3MElH8h4uA4wkqFMcoZ6bVMLiEwEnU9j3aZVxoPtKYlamih9zLf2vavLBG4odd-910sAAAcUX9M62fSL4afVaKcM-jjdd0WI1Wi9d82S4F0zGI0-G-St8KjnqG2g0LCqbGg0QkNAjpV3ujWuvThNG~ifg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
     img4:
-      'https://s3-alpha-sig.figma.com/img/6945/19b7/7f0f65d6c0cdda1a01a7485462a09c08?Expires=1612137600&Signature=Sw0Ku2p~VeMjSYzfTveAuQlzIXQBNZosSGtO-YN1q-TMP2xY4VoE7EohoiTdK4-g5BCb1TzCCCbIvFgefM48pN0DoYH3enoFHGgoLGZix7pNLU41yCHSSI1KB0daOFmu9MwZBucBBid094Z1WHjZ13V5jMp~nkxN6zSqM7~4iS0ybcWsk~UCQOuwvi8mo3MElH8h4uA4wkqFMcoZ6bVMLiEwEnU9j3aZVxoPtKYlamih9zLf2vavLBG4odd-910sAAAcUX9M62fSL4afVaKcM-jjdd0WI1Wi9d82S4F0zGI0-G-St8KjnqG2g0LCqbGg0QkNAjpV3ujWuvThNG~ifg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA'
+      'https://s3-alpha-sig.figma.com/img/6945/19b7/7f0f65d6c0cdda1a01a7485462a09c08?Expires=1612137600&Signature=Sw0Ku2p~VeMjSYzfTveAuQlzIXQBNZosSGtO-YN1q-TMP2xY4VoE7EohoiTdK4-g5BCb1TzCCCbIvFgefM48pN0DoYH3enoFHGgoLGZix7pNLU41yCHSSI1KB0daOFmu9MwZBucBBid094Z1WHjZ13V5jMp~nkxN6zSqM7~4iS0ybcWsk~UCQOuwvi8mo3MElH8h4uA4wkqFMcoZ6bVMLiEwEnU9j3aZVxoPtKYlamih9zLf2vavLBG4odd-910sAAAcUX9M62fSL4afVaKcM-jjdd0WI1Wi9d82S4F0zGI0-G-St8KjnqG2g0LCqbGg0QkNAjpV3ujWuvThNG~ifg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
   }
-
-
-
 
 // const {apartment_name, title, rating, address, price, img1, img2, img3, img4} = {item}
 const ApartmentDetail = () => {
 
-  const {apartment_name, title, rating, address, price, img1, img2, img3, img4} = {...item}
 
   const container = {
     display: 'grid',
@@ -32,49 +28,53 @@ const ApartmentDetail = () => {
     width: '1350px',
     height: '484px',
     gap: '14px 14px',
-    margin: '14px auto'
+    margin: '14px auto',
   }
-  
+
   const gallery1 = {
-    gridArea: '1 / 1 / 3 / 3'
+    gridArea: '1 / 1 / 3 / 3',
   }
   const gallery2 = {
-    gridArea: '1 / 3 / 2 / 5'
+    gridArea: '1 / 3 / 2 / 5',
   }
-  
+
   const imgStyle = {
-    width: '100%',
-    height: '100%'
+    width: '100%', 
+    height: '100%',
   }
 
   const txtStyle = {
-    marginTop: '127px',
+    marginTop: '0px',
   }
 
   return (
-    <div className="ApartmentDetail" style={{width: '1350px' }}>
-      <div className="grid-container" style={container}>
+    <div
+      className="ApartmentDetail"
+      style={{ width: '1350px', margin: '20px auto' }}>
+      {/* <div className="grid-container" style={container}>
         <div className="gallery1" style={gallery1}>
-          <img style={imgStyle} src={img1} alt="" />
+          <img style={imgStyle} src={photos[0].url_image} alt="" />
         </div>
         <div className="gallery2" style={gallery2}>
-          <img style={imgStyle} src={img2} alt="" />
+          <img style={imgStyle} src={photos[1].url_image} alt="" />
         </div>
         <div style={{ width: '100%' }}>
-          <img style={imgStyle} src={img3} alt="" />
+          <img style={imgStyle} src={photos[2].url_image} alt="" />
         </div>
         <div style={{ width: '100%' }}>
-          <img style={imgStyle} src={img4} alt="" />
+          <img style={imgStyle} src={photos[3].url_image} alt="" />
         </div>
-      </div>
+      </div> */}
       <div style={txtStyle}>
-        <h3>{apartment_name}</h3>
-        <p>{title}</p>
+        <h3>{item.apartment_name}</h3>
+        <p>{item.title}</p>
         <div>
-          <span style={{marginRight: '20px'}}>{rating}</span>
-          <span style={{color: 'blue'}}>{address}</span>
+          <span style={{ marginRight: '20px' }}>{item.rating}</span>
+          <span style={{ color: 'blue' }}>{item.address}</span>
         </div>
-        <div style={{marginTop: '20px', color: 'red'}}>Giá chỉ từ: {price}</div>
+        <div style={{ marginTop: '20px', color: 'red' }}>
+          Giá chỉ từ: {item.price}
+        </div>
       </div>
     </div>
   )
