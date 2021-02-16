@@ -29,7 +29,7 @@ export default function NearbyLocationItemList({nearbyLocationItemList}) {
       <Grid container spacing={3} align="center">
         {nearbyLocationItemList.map(nearbyLocationItem => (
           <Grid item xs={12} sm={6} md={3}>
-            <Link to={`/booking/${nearbyLocationItem.id}`}>
+            <Link to={`/detail/${nearbyLocationItem.id}`}>
               <NearbyLocationItem {...nearbyLocationItem} />
             </Link>
           </Grid>

@@ -1,61 +1,106 @@
-import React from 'react'
-import Button from '@material-ui/core/Button'
-import Menu from '@material-ui/core/Menu'
-import MenuItem from '@material-ui/core/MenuItem'
-import { makeStyles } from '@material-ui/core/styles'
-
 import User from '../../img/person-circle-sharp.svg'
 
-const useStyles = makeStyles(() => ({
-    root: {
-      top: '75px'
-    } 
-  }))
+import React from 'react'
+import Button from '@material-ui/core/Button'
+import ClickAwayListener from '@material-ui/core/ClickAwayListener'
+import Grow from '@material-ui/core/Grow'
+import Paper from '@material-ui/core/Paper'
+import Popper from '@material-ui/core/Popper'
+import MenuItem from '@material-ui/core/MenuItem'
+import MenuList from '@material-ui/core/MenuList'
+import { makeStyles } from '@material-ui/core/styles'
 
-export default function UserIcon() {
-  const [anchorEl, setAnchorEl] = React.useState(null)
+const useStyles = makeStyles(theme => ({
+  root: {
+    display: 'flex',
+  },
+  paper: {
+    marginRight: theme.spacing(2),
+  },
+}))
 
-  const handleClick = event => {
-    console.log(event.currentTarget)
-    setAnchorEl(event.currentTarget)
-  }
-
-  const handleClose = () => {
-    setAnchorEl(null)
-  }
-
-  const classes = useStyles()
-
-
+export default function MenuListComposition() {
   const logo = {
     width: '50px',
     height: '50px',
   }
 
+  const classes = useStyles()
+  const [open, setOpen] = React.useState(false)
+  const anchorRef = React.useRef(null)
+
+  const handleToggle = () => {
+    setOpen(prevOpen => !prevOpen)
+  }
+
+  const handleClose = event => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+      return
+    }
+
+    setOpen(false)
+  }
+
+  function handleListKeyDown(event) {
+    if (event.key === 'Tab') {
+      event.preventDefault()
+      setOpen(false)
+    }
+  }
+
+  // return focus to the button when we transitioned from !open -> open
+  const prevOpen = React.useRef(open)
+  React.useEffect(() => {
+    if (prevOpen.current === true && open === false) {
+      anchorRef.current.focus()
+    }
+
+    prevOpen.current = open
+  }, [open])
+
   return (
-    <div>
+    <div className={classes.root}>
+      <div>
         <Button
-          aria-controls="simple-menu"
+          ref={anchorRef}
+          aria-controls={open ? 'menu-list-grow' : undefined}
           aria-haspopup="true"
-          onClick={handleClick}>
+          onClick={handleToggle}>
           <i style={{ marginLeft: '30px' }}>
             <img style={logo} src={User} alt="" />
           </i>
         </Button>
-        <Menu classes={{root: classes.root}}
-          id="simple-menu"
-          anchorEl={anchorEl}
-          keepMounted
-          open={Boolean(anchorEl)}
-          onClose={handleClose}>
-          <MenuItem onClick={handleClose}>Đăng ký</MenuItem>
-          <MenuItem onClick={handleClose}>Đăng nhập</MenuItem>
-          <MenuItem onClick={handleClose}>
-            Đăng nhập với tư cách chủ nhà
-          </MenuItem>
-          <MenuItem onClick={handleClose}>Profile</MenuItem>
-          <MenuItem onClick={handleClose}>Trợ giúp</MenuItem>
-        </Menu>
+        <Popper
+          open={open}
+          anchorEl={anchorRef.current}
+          role={undefined}
+          transition
+          disablePortal>
+          {({ TransitionProps, placement }) => (
+            <Grow
+              {...TransitionProps}
+              style={{
+                transformOrigin:
+                  placement === 'bottom' ? 'center top' : 'center bottom',
+              }}>
+              <Paper>
+                <ClickAwayListener onClickAway={handleClose}>
+                  <MenuList
+                    autoFocusItem={open}
+                    id="menu-list-grow"
+                    onKeyDown={handleListKeyDown}>
+                    <MenuItem onClick={handleClose}>Đăng ký</MenuItem>
+                    <MenuItem onClick={handleClose}>Đăng nhập</MenuItem>
+                    <MenuItem onClick={handleClose}>Chủ nhà đăng nhập</MenuItem>
+                    <MenuItem onClick={handleClose}>Profile</MenuItem>
+                    <MenuItem onClick={handleClose}>Trợ giúp</MenuItem>
+                  </MenuList>
+                </ClickAwayListener>
+              </Paper>
+            </Grow>
+          )}
+        </Popper>
+      </div>
     </div>
   )
 }

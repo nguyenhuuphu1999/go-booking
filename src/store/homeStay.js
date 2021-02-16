@@ -14,7 +14,7 @@ const homeStaySlice = createSlice({
       return state
     },
   },
-})
+}) 
 
 const { fetchHomeStaySuccess } = homeStaySlice.actions
 

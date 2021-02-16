@@ -21,13 +21,15 @@ const HomeStayNearYou = ({ homeStayList }) => {
   return (
     <div className={classes.root}>
       <Grid container spacing={3} align="center">
-        {homeStayList.map(homeStay => (
+        {typeof homeStayList !== 'undefined'&&homeStayList!==null?
+        homeStayList.map(homeStay => (
           <Grid item xs={12} sm={6} md={3}>
-            <Link to={`/booking/:Id=${homeStay._id}`}>
+            <Link to={`/detail/${homeStay.id}`}>  
               <HomeStay {...homeStay} />
             </Link>
           </Grid>
-        ))}
+        )):<></>
+      }
       </Grid>
     </div>
   )

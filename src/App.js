@@ -67,7 +67,7 @@ function App() {
           <Route path="/become-a-partner">
             <PartnerPage />
           </Route>
-          <Route path="/near-by-location">
+          <Route path="/detail/:id">
             <RoomDetailPage />
           </Route>
           <Route path="/booking/:id">
