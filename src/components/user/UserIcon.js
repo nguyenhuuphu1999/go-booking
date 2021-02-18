@@ -10,6 +10,9 @@ import MenuItem from '@material-ui/core/MenuItem'
 import MenuList from '@material-ui/core/MenuList'
 import { makeStyles } from '@material-ui/core/styles'
 
+import DiaglogSignUp from './DiaglogSignUp'
+import DiaglogSignIn from './DiaglogSignIn'
+
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
@@ -89,8 +92,12 @@ export default function MenuListComposition() {
                     autoFocusItem={open}
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}>
-                    <MenuItem onClick={handleClose}>Đăng ký</MenuItem>
-                    <MenuItem onClick={handleClose}>Đăng nhập</MenuItem>
+                    <MenuItem>
+                      <DiaglogSignUp />
+                    </MenuItem>
+                    <MenuItem>
+                      <DiaglogSignIn />
+                    </MenuItem>
                     <MenuItem onClick={handleClose}>Chủ nhà đăng nhập</MenuItem>
                     <MenuItem onClick={handleClose}>Profile</MenuItem>
                     <MenuItem onClick={handleClose}>Trợ giúp</MenuItem>
