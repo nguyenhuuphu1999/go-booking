@@ -93,10 +93,10 @@ export default function MenuListComposition() {
                     id="menu-list-grow"
                     onKeyDown={handleListKeyDown}>
                     <MenuItem>
-                      <DiaglogSignUp />
+                      <DiaglogSignUp handleClose={handleClose}/>
                     </MenuItem>
                     <MenuItem>
-                      <DiaglogSignIn />
+                      <DiaglogSignIn handleClose={handleClose}/>
                     </MenuItem>
                     <MenuItem onClick={handleClose}>Chủ nhà đăng nhập</MenuItem>
                     <MenuItem onClick={handleClose}>Profile</MenuItem>

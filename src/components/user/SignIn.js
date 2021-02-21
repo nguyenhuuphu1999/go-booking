@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Grid,
   Paper,
@@ -14,6 +14,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
 // import {Link} from 'react-router-dom'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+import axios from 'axios'
 
 const SignIn = ({ handleChange }) => {
   const paperStyle = {
@@ -48,25 +49,42 @@ const SignIn = ({ handleChange }) => {
     paddingTop: 5,
   }
   const initialValues = {
-    username: '',
-    password: '',
+    email: '',
+    passwd: '',
     remember: false,
   }
   const onSubmit = (values, props) => {
     console.log(values)
-    setTimeout(() => {
-      props.resetForm()
-      props.setSubmitting(false)
-    }, 2000)
+    // setTimeout(() => {
+    //   props.resetForm()
+    //   props.setSubmitting(false)
+    // }, 2000)
+    axios
+      .post(process.env.REACT_APP_API_URL + '/login/user', values)
+      .then(res => {
+        console.log(res.data.err)
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
   const validationSchema = Yup.object().shape({
-    username: Yup.string()
-      .min(2, 'Nhập tối thiểu 2 chữ cái')
-      .required('Bắt buộc'),
-    password: Yup.string()
-      .min(8, 'Nhập tối thiểu 8 ký tự')
-      .required('Bắt buộc'),
+    email: Yup.string().min(2, 'Nhập tối thiểu 2 chữ cái').required('Bắt buộc'),
+    passwd: Yup.string().min(8, 'Nhập tối thiểu 8 ký tự').required('Bắt buộc'),
   })
+  // const [data1, setData] = useState({
+  //   email: '',
+  //   passwd: '',
+  // })
+
+  // const handleInput = e => {
+  //   const { name, value } = e.target
+  //   setData(setState => ({
+  //     ...setState,
+  //     [name]: value,
+  //   }))
+  //   console.log(value)
+  // }
   return (
     <Grid>
       <Paper style={paperStyle}>
@@ -86,18 +104,18 @@ const SignIn = ({ handleChange }) => {
                 <Field
                   as={TextField}
                   fullWidth
-                  name="username"
+                  name="email"
                   label="User Name *"
                   placeholder="Vui lòng điền tài khoản"
-                  helperText={<ErrorMessage name="username" />}
+                  helperText={<ErrorMessage name="email" />}
                 />
                 <Field
                   as={TextField}
                   fullWidth
-                  name="password"
+                  name="passwd"
                   label="Password *"
                   type="password"
-                  helperText={<ErrorMessage name="password" />}
+                  helperText={<ErrorMessage name="passwd" />}
                 />
                 <div style={left}>
                   <Field
@@ -111,6 +129,7 @@ const SignIn = ({ handleChange }) => {
                     type="submit"
                     variant="contained"
                     style={buttonStyle}
+                    onClick={onSubmit}
                     disabled={props.isSubmitting}>
                     {props.isSubmitting ? 'Loading' : 'Đăng nhập'}
                   </Button>

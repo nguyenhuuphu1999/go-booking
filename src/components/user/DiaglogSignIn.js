@@ -37,7 +37,7 @@ const DialogTitle = withStyles(styles)((props) => {
 });
 
 
-export default function DiaglogSignIn() {
+export default function DiaglogSignIn({handleClose}) {
 
     const signInStyle = {
         width: 180,
@@ -48,9 +48,9 @@ export default function DiaglogSignIn() {
   const handleClickOpen = () => {
     setOpen(true);
   };
-  const handleClose = () => {
-    setOpen(false);
-  };
+  // const handleClose = () => {
+  //   setOpen(false);
+  // };
 
   return (
     <div>

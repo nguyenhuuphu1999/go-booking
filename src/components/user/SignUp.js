@@ -9,6 +9,7 @@ import {
 } from '@material-ui/core'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+import axios from 'axios'
 
 const SignUp = () => {
   const paperStyle = {
@@ -23,7 +24,7 @@ const SignUp = () => {
     backgroundColor: '#FF0000',
     color: '#ffffff',
     borderRadius: '20px',
-    margin: '8px 0'
+    margin: '8px 0',
   }
   const center = {
     display: 'flex',
@@ -31,30 +32,40 @@ const SignUp = () => {
     marginTop: '5px',
   }
   const initialValues = {
-    phone: '',
-    name: '',
-    password: '',
+    phone_number: '',
+    username: '',
+    passwd: '',
     email: '',
     termAndConditions: false,
   }
   const onSubmit = (values, props) => {
     console.log(values)
-    console.log(props)
-        setTimeout(() => {
+    // console.log(props.submitForm)
 
-            props.resetForm()
-            props.setSubmitting(false)
-        }, 2000)
+    // setTimeout(() => {
+    //   props.resetForm()
+    //   props.setSubmitting(false)
+    // }, 2000)
+    console.log(process.env.REACT_APP_API_URL + '/Register/?type=user')
+    axios
+      .post(process.env.REACT_APP_API_URL + '/Register/?type=user', values)
+      .then(res => {
+        console.log(res)
+        console.log('hehe')
+      })
+      .catch(err => {
+        console.log('er')
+        console.error(err)
+      })
   }
+
   const validationSchema = Yup.object().shape({
-    phone: Yup.number().typeError('Chỉ nhập số').required('Bắt buộc'),
-    name: Yup.string()
+    phone_number: Yup.number().typeError('Chỉ nhập số').required('Bắt buộc'),
+    username: Yup.string()
       .min(2, 'Nhập tối thiểu 2 chữ cái!')
       .max(50, 'Tên quá dài!')
       .required('Bắt buộc'),
-    password: Yup.string()
-      .min(8, 'Nhập tối thiểu 8 ký tự')
-      .required('Bắt buộc'),
+    passwd: Yup.string().min(8, 'Nhập tối thiểu 8 ký tự').required('Bắt buộc'),
     termAndConditions: Yup.string().oneOf(
       ['true'],
       'Đồng ý với các điều khoản sử dụng',
@@ -80,24 +91,24 @@ const SignUp = () => {
               <Field
                 as={TextField}
                 fullWidth
-                name="phone"
+                name="phone_number"
                 label="Số điện thoại"
-                helperText={<ErrorMessage name="phone" />}
+                helperText={<ErrorMessage name="phone_number" />}
               />
               <Field
                 as={TextField}
                 fullWidth
-                name="name"
+                name="username"
                 label="User name"
-                helperText={<ErrorMessage name="name" />}
+                helperText={<ErrorMessage name="username" />}
               />
               <Field
                 as={TextField}
                 fullWidth
-                name="password"
+                name="passwd"
                 label="Password"
                 type="password"
-                helperText={<ErrorMessage name="password" />}
+                helperText={<ErrorMessage name="passwd" />}
               />
               <Field
                 as={TextField}
@@ -114,8 +125,13 @@ const SignUp = () => {
                 <ErrorMessage name="termAndConditions" />
               </FormHelperText>
               <div style={center}>
-                <Button type="submit" variant="contained" style={buttonStyle} disabled={props.isSubmitting}>
-                {props.isSubmitting ? "Loading" : "Tạo tài khoản"}
+                <Button
+                  type="submit"
+                  variant="contained"
+                  style={buttonStyle}
+                  disabled={props.isSubmitting}>
+                  {/* {props.isSubmitting ? 'Loading' : 'Tạo tài khoản'} */}
+                  Tạo tài khoản
                 </Button>
               </div>
             </Form>
