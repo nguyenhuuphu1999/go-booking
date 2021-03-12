@@ -16,27 +16,13 @@ import Availability from './pages/Availability'
 import PartnerPage from './pages/PartnerPage'
 import RoomDetailPage from './pages/RoomDetailPage'
 import BookingPage from './pages/BookingPage'
-
-
-// import React, { useEffect, useState } from 'react'
-// import apartmentApi from './api/apartmentApi'
+import PageHomeOwn from './components/PageHomeOwn/index'
+import '../src/styletailwindcss/main.css'
+import ApartmentOWn from './components/Apartment'
+import EditPageApartment from './EditPageApartment/Index'
 
 function App() {
-  // const [apartments, setApartments] = useState([])
-
-  // useEffect(() => {
-  //   const fetchApartments = async () => {
-  //     try {
-  //       // const params = { _page: 1, _limit: 10 };
-  //       const response = await apartmentApi.getAll()
-  //       console.log('Fetch products successfully: ', response)
-  //       setApartments(response.data)
-  //     } catch (error) {
-  //       console.log('Failed to fetch product list: ', error)
-  //     }
-  //   }
-  //   fetchApartments()
-  // }, []);
+ 
 
   return (
     <div className="App">
@@ -73,6 +59,15 @@ function App() {
           <Route path="/booking/:id">
             <BookingPage />
           </Route>
+
+          <Route path="/pagehome/apartment">
+            <ApartmentOWn />
+          </Route>
+
+          <Route path="/pagehome" component={PageHomeOwn}/>
+
+          <Route path="/editpageApartment/:id" component={EditPageApartment}/>
+
         </Switch>
 
         <Footer />

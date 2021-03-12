@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 
-import { couponList } from "../../FakeData/data";
+import  couponList  from "../../FakeData/data";
 import Coupon from "./Coupon"
 
 const useStyles = makeStyles((theme) => ({

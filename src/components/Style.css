@@ -1,0 +1,13 @@
+
+.root-form-login-user{
+    background-color: blue;
+    width: 40%;
+}
+.from-login-user{
+    display: flex;
+    flex-direction: column;
+ 
+}
+.input-login-form{
+    border: 1px solid;
+}

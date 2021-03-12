@@ -12,23 +12,30 @@
     "@testing-library/user-event": "^12.6.0",
     "axios": "^0.21.1",
     "formik": "^2.2.6",
+    "pure-react-carousel": "^1.27.6",
     "react": "^17.0.1",
+    "react-awesome-slider": "^4.1.0",
     "react-datepicker": "^3.5.0",
     "react-dom": "^17.0.1",
+    "react-elastic-carousel": "^0.11.1",
     "react-redux": "^7.2.2",
+    "react-responsive-carousel": "^3.2.13",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-slick": "^0.28.0",
     "redux": "^4.0.5",
     "web-vitals": "^0.2.4",
     "yup": "^0.32.8"
   },
   "scripts": {
-    "start": "set PORT=4001 && react-scripts start",
+    "start": "npm run watch:css && react-scripts start && PORT=4001",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "build:css": "postcss src/styletailwindcss/tailwind.css -o src/styletailwindcss/main.css ",
+    "watch:css": "postcss src/styletailwindcss/tailwind.css -o src/styletailwindcss/main.css "
   },
   "eslintConfig": {
     "extends": [
@@ -54,6 +61,10 @@
     "@storybook/addon-links": "^6.1.11",
     "@storybook/node-logger": "^6.1.11",
     "@storybook/preset-create-react-app": "^3.1.5",
-    "@storybook/react": "^6.1.11"
+    "@storybook/react": "^6.1.11",
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.6",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.3"
   }
 }

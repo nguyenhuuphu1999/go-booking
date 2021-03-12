@@ -55,3 +55,9 @@
     width: 75%;
     margin: 40px auto 20px auto;
   }
+
+  @media only screen and (min-width: 640px) {
+    .footer-icon-payment{
+      
+    }
+  }

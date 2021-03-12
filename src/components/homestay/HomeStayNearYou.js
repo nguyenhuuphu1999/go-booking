@@ -23,7 +23,7 @@ const HomeStayNearYou = ({ homeStayList }) => {
       <Grid container spacing={3} align="center">
         {typeof homeStayList !== 'undefined'&&homeStayList!==null?
         homeStayList.map(homeStay => (
-          <Grid item xs={12} sm={6} md={3}>
+          <Grid item xs={12} sm={6} md={3} >
             <Link to={`/detail/${homeStay.id}`}>  
               <HomeStay {...homeStay} />
             </Link>

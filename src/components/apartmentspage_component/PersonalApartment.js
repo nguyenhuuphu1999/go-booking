@@ -1,6 +1,6 @@
 import React from "react";
 
-import { personalApartmentList } from "../../FakeData/data";
+import  personalApartmentList  from "../../FakeData/data";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import  SpecificApartment from '../homepage_component/NearbyLocationItem';

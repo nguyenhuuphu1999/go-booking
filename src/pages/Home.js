@@ -5,7 +5,7 @@ import Apartments from '../components/homepage_component/Apartments'
 import NearbyLocationListItem from '../components/homepage_component/NearbyLocationListItem'
 import FamousPlaces from '../components/homepage_component/FamousPlaces'
 import Header from '../components/header/Header'
-
+import $ from "jquery"
 import { fetchHomes } from '../store/home'
 
 const Home = () => {
@@ -21,9 +21,9 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <Apartments apartments={apartments} />
-      <NearbyLocationListItem nearbyLocationItemList={nearbyLocationItemList} />
-      <FamousPlaces />
+        <Apartments apartments={apartments} />
+        <NearbyLocationListItem nearbyLocationItemList={nearbyLocationItemList} />
+        <FamousPlaces />
     </div>
   )
 }

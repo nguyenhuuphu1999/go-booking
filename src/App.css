@@ -22,6 +22,18 @@ a {
   text-decoration: none;
 }
 
+.show{
+  display: block;
+  transition: all 0.5s ease;
+}
+.hidden{
+  display: none;
+}
+
+.btn{
+  outline: none;
+}
+
 
 
 

@@ -1,4 +1,4 @@
-export const apartmentList = [
+ const apartmentList = [
     {
       title: 'Home stay',
       access_times: 1000,
@@ -26,123 +26,7 @@ export const apartmentList = [
     }
   ]
 
-export const hotelsNearYouList = [
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 1000,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    },
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 1200,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    },
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 3000,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    },
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 1000,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    },
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 1000,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    },
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 1200,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    },
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 3000,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    },
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 1000,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    }
-  ]
-export const nearbyLocationItemList = [
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 1000,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    },
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 1200,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    },
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 3000,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    },
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 1000,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    },
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 1000,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    },
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 1200,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    },
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 3000,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    },
-    {
-      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
-      price: 1000,
-      address: 'Hà Nội',
-      image_url:
-        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
-    }
-  ]
-export const personalApartmentList = [
+  const hotelsNearYouList = [
     {
       description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
       price: 1000,
@@ -201,7 +85,129 @@ export const personalApartmentList = [
     }
   ]
 
-  export const famousPlaceList = [
+
+ const nearbyLocationItemList = [
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1000,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1200,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 3000,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1000,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1000,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1200,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 3000,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1000,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    }
+  ]
+
+
+ const personalApartmentList = [
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1000,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1200,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 3000,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1000,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1000,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1200,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 3000,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    },
+    {
+      description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
+      price: 1000,
+      address: 'Hà Nội',
+      image_url:
+        'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
+    }
+  ]
+
+
+
+   const famousPlaceList = [
     {
       address: 'Hà Nội',
       image_url:
@@ -246,7 +252,10 @@ export const personalApartmentList = [
     }
   ]
 
-  export const feedbackList = [
+
+
+
+   const feedbackList = [
     {
       img: 'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200',
       content:
@@ -267,7 +276,10 @@ export const personalApartmentList = [
     },
   ]
 
-  export const couponList = [
+
+
+
+   const couponList = [
     {
       address: 'Vũng Tàu',
   image_url: 'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200', 
@@ -294,7 +306,9 @@ export const personalApartmentList = [
     }
   ]
 
-  export const homeStayList = [
+
+
+   const homeStayList = [
     {
       description: 'Chung cư 56 m² 1 phòng ngủ, 1 phòng tắm riêng ở Quận 1',
       price: 1000,
@@ -352,3 +366,7 @@ export const personalApartmentList = [
         'https://a0.muscache.com/im/pictures/afca13d1-4fda-4fef-90d9-2a8ebc5fc411.jpg?im_w=1200'
     }
   ]
+
+
+  
+  export default {apartmentList,hotelsNearYouList,nearbyLocationItemList,personalApartmentList,famousPlaceList,feedbackList,couponList,homeStayList}

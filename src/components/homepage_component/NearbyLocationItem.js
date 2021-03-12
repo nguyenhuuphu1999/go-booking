@@ -15,6 +15,7 @@ const useStyles = makeStyles({
     color: 'black',
     fontSize: '16px',
     fontWeight: 200,
+
   },
   media: {
     height: 220,
@@ -39,7 +40,7 @@ function NearbyLocationItem({
   const classes = useStyles()
 
   return (
-    <CardActionArea className={classes.root}>
+    <CardActionArea className={classes.root} style={{outline:'none'}}>
       <CardMedia
         className={classes.media}
         image={image_url ?? apartment_image.url_image}

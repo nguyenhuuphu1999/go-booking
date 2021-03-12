@@ -18,11 +18,11 @@ export default function ApartmentList({ apartments }) {
   const classes = useStyles()
 
   return (
-    <div className="container">
+    // <div className="container">
       <div className={classes.root}>
         <Grid container spacing={3} align="center">
           {apartments.map(apartment => (
-            <Grid item xs={12} sm={6} md={3}>
+            <Grid item xs={12} sm={6} md={6} lg={3}>
               {/* <Link to={`/home-stay?apartmentId=${apartment.id}`}> */}
               <Link to={`/apartments/${apartment.id}`}>
                 <Apartment key={apartment.id} {...apartment} />
@@ -32,6 +32,6 @@ export default function ApartmentList({ apartments }) {
           ))}
         </Grid>
       </div>
-    </div>
+    // </div>
   )
 }
