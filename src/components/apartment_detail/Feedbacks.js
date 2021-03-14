@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 import Feedback from '../homepage_component/Feedback'
-import { feedbackList } from "../../FakeData/data";
-import Grid from "@material-ui/core/Grid";
-import { makeStyles } from "@material-ui/core/styles";
+// import { feedbackList } from "../../FakeData/data";
+import Grid from '@material-ui/core/Grid'
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -17,21 +17,20 @@ const useStyles = makeStyles(() => ({
     fontSize: 27,
     marginBottom: 46,
   },
-}));
+}))
 
-export default function Feedbacks({feedbackList}) {
-  const classes = useStyles();
+export default function Feedbacks({ feedbackList }) {
+  const classes = useStyles()
 
   return (
     <div className={classes.root}>
       <Grid container spacing={3} align="center" justify="space-around">
-        {feedbackList.map((feedback) => (
+        {feedbackList.map(feedback => (
           <Grid item xs={12} md={3}>
             <Feedback {...feedback} />
           </Grid>
         ))}
       </Grid>
     </div>
-  );
-
+  )
 }

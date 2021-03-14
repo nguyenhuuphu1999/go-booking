@@ -25,6 +25,11 @@
 .root-page-hotels{
     background-color: #ECE8E5 !important;
 }
+
+.carousel-item{
+    display: block !important;
+}
+
 @media screen and (max-width:640px){
     .slide-image-componet{
         width: 400px;

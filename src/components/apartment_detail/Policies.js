@@ -193,7 +193,14 @@ const Policies = () => {
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-          <div className="rootCheckBooking">
+          <div
+            className="rootCheckBooking"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              height: '150px',
+            }}>
             <div style={{ padding: '10px' }}>
               <div className="rootBooking">
                 <Grid container>
@@ -205,6 +212,7 @@ const Policies = () => {
                         selected={startDateinput}
                         onCalendarOpen={handleClickInput}
                         onChange={handleChangeInput}
+                        style={{ border: 'none' }}
                       />
                     </div>
                   </Grid>
@@ -223,17 +231,30 @@ const Policies = () => {
               </div>
               <div className="bookingnote"></div>
             </div>
-            <div className="btn-booking">
+            <div
+              className="btn-booking"
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+              }}>
               <Button
                 variant="contained"
                 color="secondary"
-                onClick={hadlesendFormData}>
+                onClick={hadlesendFormData}
+                style={{ width: '88%', margin: 'auto ' }}>
                 Booking
               </Button>
             </div>
-            <div>{
-              (error)? <Alert severity="error">Xin lỗi ngày {data.check_in} => {data.check_out} không còn trống </Alert>:<></>
-            }</div>
+            <div>
+              {error ? (
+                <Alert severity="error">
+                  Xin lỗi ngày {data.check_in} => {data.check_out} không còn
+                  trống{' '}
+                </Alert>
+              ) : (
+                <></>
+              )}
+            </div>
           </div>
         </Grid>
       </Grid>

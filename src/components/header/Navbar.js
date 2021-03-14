@@ -104,7 +104,10 @@ function Navbar(props) {
   const id = open ? 'simple-popover' : undefined
 
   return (
-    <Grid container style={{ color: '#fff' }} className="nav-root">
+    <Grid
+      container
+      style={{ color: '#fff', zIndex: '1000' }}
+      className="nav-root">
       <Grid item xs={4} sm={4} md={2} lg={2}>
         <Link to="/home">
           <img style={logo} src={GoLogo} alt="" />
@@ -177,9 +180,7 @@ function Navbar(props) {
         transformOrigin={{
           vertical: 'top',
           horizontal: 'center',
-        }}
-     
-      >
+        }}>
         <PopupLoginNavbar />
       </Popover>
     </Grid>
