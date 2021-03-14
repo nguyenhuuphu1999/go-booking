@@ -7,6 +7,7 @@ import FamousPlaces from '../components/homepage_component/FamousPlaces'
 import Header from '../components/header/Header'
 import $ from "jquery"
 import { fetchHomes } from '../store/home'
+import ComponentApartment from '../components/ComponentApartment'
 
 const Home = () => {
   const dispatch = useDispatch()
@@ -17,12 +18,13 @@ const Home = () => {
 
   const apartments = useSelector(state => state.home.typeHouse)
   const nearbyLocationItemList = useSelector(state => state.home.apartment)
-
+  console.log(nearbyLocationItemList)
   return (
     <div>
       <Header />
         <Apartments apartments={apartments} />
-        <NearbyLocationListItem nearbyLocationItemList={nearbyLocationItemList} />
+        {/* <NearbyLocationListItem nearbyLocationItemList={nearbyLocationItemList} /> */}
+        <ComponentApartment data={nearbyLocationItemList}/>
         <FamousPlaces />
     </div>
   )

@@ -7,10 +7,11 @@ const homeStayApi = {
   //   return axiosClient.get(url, { params });
   // },
 
-  get: id => {
-    const url = `/apartments/${id}/typeApartment`;
+  get: (id,page) => { ///apartments/1/typeApartment?page=1
+    const url = `/apartments/${id}/typeApartment?page=${page}`;
     return axiosClient.get(url);
   },  
+ 
 }
 
 export default homeStayApi;

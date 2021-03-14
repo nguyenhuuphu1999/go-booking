@@ -7,7 +7,7 @@ const detailApi = {
 //     return axiosClient.get(url, { params });
 //   },
 
-  get: id => {
+  get: id => {//apartments/10/detail
     const url = `/apartments/${id}/detail`;
     return axiosClient.get(url);
   }, 

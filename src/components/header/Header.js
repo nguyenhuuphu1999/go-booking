@@ -11,7 +11,7 @@ const Header = () => {
     var lastScrollTop = 0
     $(window).scroll(function () {
       var currentScrollTop = $(this).scrollTop()
-      console.log(currentScrollTop)
+   
       if (currentScrollTop <= 400) {
         setHiddenNavbar(true)
       } else {

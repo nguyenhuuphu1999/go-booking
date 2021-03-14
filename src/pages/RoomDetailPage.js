@@ -10,46 +10,50 @@ import { fetchDetail } from '../store/detail'
 import { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import ApartmentDetailUser from '../components/apartment_detail/ApartmentDetailUser'
 
 const RoomDetailPage = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
 
   const { id } = useParams()
-  const param = useParams();
-  const [image,setImage]= useState([])
-  useEffect(() => { 
-   
-    dispatch(fetchDetail(id)) 
+  const param = useParams()
+  const [image, setImage] = useState([])
+  useEffect(() => {
+    dispatch(fetchDetail(id))
 
-    axios.get(process.env.REACT_APP_API_URL + "/apartments/"+ param.id)
-    .then(res=>{
-      console.log(res.data.data[0])
-      setImage(res.data.data[0])
-    })
-    .catch((err)=>{
-      console.log(err)
-    })
-
+    // axios.get(process.env.REACT_APP_API_URL + "/apartments/"+ param.id)
+    // .then(res=>{
+    //   console.log(res.data.data[0])
+    //   setImage(res.data.data[0])
+    // })
+    // .catch((err)=>{
+    //   console.log(err)
+    // })
   }, [dispatch, id])
 
   const photos = useSelector(state => state.detail.apartmentPhotos)
   const apartment = useSelector(state => state.detail.apartment)
   const feedbackList = useSelector(state => state.detail.comment)
-  
-  const [edit,setEdit]= React.useState(false)
-  const onClick = () =>{
-      setEdit(!edit)
-      console.log(edit)
+
+  console.log(photos)
+  console.log(apartment)
+  console.log(feedbackList)
+
+  const [edit, setEdit] = React.useState(false)
+  const onClick = () => {
+    setEdit(!edit)
+    console.log(edit)
   }
 
   return (
     <div>
       <Navbar onClick={onClick}></Navbar>
-     <div style={{marginTop:"100px"}}>
-     <ApartmentDetail edit={edit} data = {image} />
-      <Policies />
-      <Feedbacks feedbackList={feedbackList}/>
-     </div>
+      <div style={{ marginTop: '100px' }}>
+        <ApartmentDetailUser info={apartment} data={photos} />
+
+        <Policies />
+        <Feedbacks feedbackList={feedbackList} />
+      </div>
     </div>
   )
 }

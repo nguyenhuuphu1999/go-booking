@@ -1,6 +1,6 @@
 // import React from 'react';
 import './App.css'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
@@ -17,7 +17,7 @@ import PartnerPage from './pages/PartnerPage'
 import RoomDetailPage from './pages/RoomDetailPage'
 import BookingPage from './pages/BookingPage'
 import PageHomeOwn from './components/PageHomeOwn/index'
-import '../src/styletailwindcss/main.css'
+
 import ApartmentOWn from './components/Apartment'
 import EditPageApartment from './EditPageApartment/Index'
 

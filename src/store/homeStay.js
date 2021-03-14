@@ -18,9 +18,11 @@ const homeStaySlice = createSlice({
 
 const { fetchHomeStaySuccess } = homeStaySlice.actions
 
+
 // async action
-export const fetchHomeStay = (id) => async dispatch => {
-  const res = await homeStayApi.get(id)
+export const fetchHomeStay = (id,page) => async dispatch => {
+  const res = await homeStayApi.get(id,page)
+  console.log(res)
   return dispatch(fetchHomeStaySuccess(res))
 }
 

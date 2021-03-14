@@ -76,6 +76,7 @@ const Apartment = () => {
   }
 
   return (
+   
     <div>
       <Navbar />
       <div style={{ marginTop: '7%' }}>

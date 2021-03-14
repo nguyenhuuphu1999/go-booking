@@ -11,6 +11,7 @@ const param =   useParams()
   console.log(props.data)
   const [info,setInfo] = useState({apartment_name:'',price:''})
   useEffect(()=>{
+    console.log(props.data)
     if(props.data != '' && props.data != null){
       setInfo(
         (item)=>({

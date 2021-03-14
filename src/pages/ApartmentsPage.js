@@ -22,7 +22,7 @@ const ApartmentsPage = () => {
     <div>
       <Navbar/>
       <h3 className={classes.h3Style}>Tìm chỗ ở riêng</h3>
-      <HomeSearch />
+      {/* <HomeSearch /> */}
       <PersonalApartment/>
     </div>
   )

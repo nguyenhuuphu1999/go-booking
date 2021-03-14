@@ -22,8 +22,8 @@ const Hotels = () => {
   return (
     <div>
       <Navbar />
-      <h3 className={classes.h3Style}>Tìm khách sạn</h3>
-      <HomeSearch />
+     
+      {/* <HomeSearch /> */}
       <HotelsNearYou />
     </div>
   )
